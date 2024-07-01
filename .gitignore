@@ -8,8 +8,6 @@ out/
 # Ignore serverless build output
 .serverless/
 
-# Ignore static folder in the root of the project
-public/
 
 # Ignore environment variables file
 .env.local
