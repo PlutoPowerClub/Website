@@ -19,7 +19,7 @@ const MapboxMap: React.FC = () => {
 
       map.on("load", () => {
         // Load GeoJSON file
-        fetch("src/components/buildings.geojson")
+        fetch("/buildings.geojson")
           .then((response) => response.json())
           .then((data) => {
             // Add GeoJSON data as a source
@@ -34,11 +34,54 @@ const MapboxMap: React.FC = () => {
               type: "fill-extrusion",
               source: "custom-data",
               paint: {
-                "fill-extrusion-color": "#ffffff", // Color of the building
-                "fill-extrusion-height": 50, // Height of the building
+                // Use a property-driven color expression
+                "fill-extrusion-color": [
+                  "case",
+                  ["==", ["get", "color"], "red"],
+                  "#ae493f", // Red color
+                  ["==", ["get", "color"], "green"],
+                  "#4caf50", // Green color
+                  "#ccc", // Default color (shouldn't actually be used)
+                ],
+                "fill-extrusion-height": 5, // Height of the building
                 "fill-extrusion-base": 0, // Base height of the building
                 "fill-extrusion-opacity": 0.6, // Opacity of the building
               },
+            });
+
+            // Add click event listener to toggle building color
+            map.on("click", "custom-layer", (e) => {
+              const features = map.queryRenderedFeatures(e.point, {
+                layers: ["custom-layer"],
+              });
+
+              if (!features.length) {
+                return;
+              }
+
+              const feature = features[0];
+              const currentColor = feature.properties.color;
+
+              // Toggle color on click
+              const newColor = currentColor === "red" ? "green" : "red";
+
+              // Update GeoJSON source
+              const updatedData = {
+                ...data,
+                features: data.features.map((f) =>
+                  f.properties.id === feature.properties.id
+                    ? {
+                        ...f,
+                        properties: {
+                          ...f.properties,
+                          color: newColor,
+                        },
+                      }
+                    : f,
+                ),
+              };
+
+              map.getSource("custom-data").setData(updatedData);
             });
           })
           .catch((error) => {
