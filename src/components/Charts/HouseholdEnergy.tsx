@@ -118,7 +118,7 @@ const ChartThree: React.FC = () => {
         </div>
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
-            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#d7a21c]"></span>
+            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#ae493f] "></span>
             <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
               <span> Grid </span>
               <span> 20% </span>
@@ -127,7 +127,7 @@ const ChartThree: React.FC = () => {
         </div>
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
-            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#ae493f]"></span>
+            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#d7a21c]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
               <span> Individual </span>
               <span> 20% </span>
