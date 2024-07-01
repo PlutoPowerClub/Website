@@ -5,8 +5,7 @@ import mapboxgl from "mapbox-gl";
 
 // Make sure to replace 'your_mapbox_access_token' with your actual Mapbox access token
 mapboxgl.accessToken =
-  "pk.eyJ1Ijoiam9uZXM1ODEiLCJhIjoiY2xwNzAyeDVlMXlxZzJqbzVvcnBjbDZ3OCJ9.cuGt6LfugBHuqw9rJKQ2DA";
-
+  "pk.eyJ1Ijoiam9uZXM1ODEiLCJhIjoiY2xwNzM4Y3JpMXZ1NjJrcWswNDFrbnl1ZiJ9.Ud2Oqbe9kgEmB3U3UOH98w";
 const MapboxMap: React.FC = () => {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
 
