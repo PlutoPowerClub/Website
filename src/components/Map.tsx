@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl";
+import geojson from "../geoJSON";
 
 // Make sure to replace 'your_mapbox_access_token' with your actual Mapbox access token
 mapboxgl.accessToken =
@@ -15,7 +16,7 @@ const MapboxMap: React.FC = () => {
         container: mapContainerRef.current,
         style: "mapbox://styles/mapbox/streets-v11", // Style of the map
         center: [-1.2982167, 50.7029], // Initial map center in [lng, lat]
-        zoom: 12, // Initial zoom level
+        zoom: 18, // Initial zoom level
       });
 
       // Clean up on unmount
