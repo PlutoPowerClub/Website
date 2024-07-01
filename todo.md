@@ -1,0 +1,3 @@
+- Change the map so that geojson has ids for which buildings have solar and which don't.
+- Make this reflect in the community energy dashboard (could just change based on click event for now maybe)
+- Explain that this is just a workaround cos you have to pay for the solar api.
