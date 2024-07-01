@@ -11,8 +11,8 @@ const options: ApexOptions = {
     fontFamily: "Satoshi, sans-serif",
     type: "donut",
   },
-  colors: ["#3C50E0", "#6577F3", "#8FD0EF", "#0FADCF"],
-  labels: ["Desktop", "Tablet", "Mobile", "Unknown"],
+  colors: ["#7dc35f", "#ae493f", "#dfb641"],
+  labels: ["Community", "Grid", "Individual"],
   legend: {
     show: false,
     position: "bottom",
@@ -50,7 +50,7 @@ const options: ApexOptions = {
 };
 
 const ChartThree: React.FC = () => {
-  const series = [65, 34, 12, 56];
+  const series = [60, 20, 20];
 
   return (
     <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
@@ -67,6 +67,9 @@ const ChartThree: React.FC = () => {
               id=""
               className="relative z-20 inline-flex appearance-none bg-transparent py-1 pl-3 pr-8 text-sm font-medium outline-none"
             >
+              <option value="" className="dark:bg-boxdark">
+                Daily
+              </option>
               <option value="" className="dark:bg-boxdark">
                 Monthly
               </option>
@@ -106,10 +109,10 @@ const ChartThree: React.FC = () => {
       <div className="-mx-8 flex flex-wrap items-center justify-center gap-y-3">
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
-            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-primary"></span>
+            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#63c64f]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
-              <span> Community Solar </span>
-              <span> 65% </span>
+              <span> Community </span>
+              <span> 60% </span>
             </p>
           </div>
         </div>
@@ -118,25 +121,16 @@ const ChartThree: React.FC = () => {
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#d7a21c]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
               <span> Grid </span>
-              <span> 34% </span>
+              <span> 20% </span>
             </p>
           </div>
         </div>
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
-            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#8FD0EF]"></span>
+            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#ae493f]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
-              <span> Mobile </span>
-              <span> 45% </span>
-            </p>
-          </div>
-        </div>
-        <div className="w-full px-8 sm:w-1/2">
-          <div className="flex w-full items-center">
-            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#0FADCF]"></span>
-            <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
-              <span> Unknown </span>
-              <span> 12% </span>
+              <span> Individual </span>
+              <span> 20% </span>
             </p>
           </div>
         </div>
