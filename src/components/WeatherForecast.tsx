@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ReactApexChart from "react-apexcharts";
 
 interface HourlyForecast {
   time: string;
@@ -49,23 +48,25 @@ const WeatherForecast: React.FC = () => {
   return (
     <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
       {forecastData && forecastData.current ? (
-        <div className="mb-4 flex items-center justify-between">
-          <div>
-            <h6 className="text-lg font-medium text-black dark:text-white">
-              Current Weather
-            </h6>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Cloud Cover: {forecastData.current.cloud_cover}%
-            </p>
+        <div>
+          <div className="mb-4 flex items-center justify-between">
+            <div>
+              <h6 className="text-xl font-bold text-black dark:text-white">
+                Current Weather
+              </h6>
+            </div>
+            <div className="pt-2 text-right">
+              <p className="text-lg font-medium text-black dark:text-white">
+                {forecastData.current.temperature_2m}°C
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                {forecastData.current.weather_description}
+              </p>
+            </div>
           </div>
-          <div className="text-right">
-            <p className="text-lg font-medium text-black dark:text-white">
-              {forecastData.current.temperature_2m}°C
-            </p>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              {forecastData.current.weather_description}
-            </p>
-          </div>
+          <p className="dark:text-gray-400 text-lg font-bold text-black">
+            ✅ Good time to switch on your washing
+          </p>
         </div>
       ) : (
         <p>Loading...</p>
