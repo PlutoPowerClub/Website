@@ -1,4 +1,4 @@
 - Change favicon to starfish.
 - add endpoint to weather forecast
-- community cashback on the dashboard
+- community cashback - edit
 - some of buildings should be green on start on map.

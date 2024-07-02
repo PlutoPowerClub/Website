@@ -162,7 +162,20 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           </button>
         </div>
         {/* <!-- SIDEBAR HEADER --> */}
-
+        <Link href="/">
+          <div className="flex  w-full flex-row hover:opacity-50">
+            <Image
+              src="/images/logo.png"
+              alt="The starfish energy logo with a starfish in red and yellow and our name on the right side"
+              width={300}
+              height={300}
+              className="h-40 w-40 "
+            />
+            <h1 className="h-40 w-40 pt-17 text-xl text-bodydark1">
+              Starfish Energy
+            </h1>
+          </div>
+        </Link>
         <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
           {/* <!-- Sidebar Menu --> */}
           <nav className="mt-5 px-4 py-4 lg:mt-9 lg:px-6">
