@@ -16,6 +16,9 @@ interface ForecastData {
   };
 }
 
+const endPoint =
+  "https://zuzanakovacsova--starfish-behaviour.modal.run/?latitude=51.514216&longitude=-0.137538";
+
 const dummyForecastData: ForecastData = {
   current: {
     time: "2024-07-01T12:00:00Z",
@@ -64,8 +67,9 @@ const WeatherForecast: React.FC = () => {
               </p>
             </div>
           </div>
+          {/* Fetch from endpoint here */}
           <p className="dark:text-gray-400 text-lg font-bold text-black">
-            ✅ Good time to switch on your washing
+            Consider waiting for weather to improve before using lots of energy.
           </p>
         </div>
       ) : (
