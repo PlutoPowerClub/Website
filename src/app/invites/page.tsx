@@ -3,8 +3,14 @@
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import Map from "@/components/Map";
 import ChartFour from "@/components/Charts/CommunityEnergy";
-
+import { useState } from "react";
+const option1 = 65;
 export default function Home() {
+  const [option1, setOption1] = useState(65);
+  const updateOption1 = (newValue: number) => {
+    setOption1(newValue);
+  };
+
   return (
     <>
       <DefaultLayout>
@@ -12,9 +18,9 @@ export default function Home() {
           Click to add a neighbour's building to your community solar map.
         </p>
         <div className="flex flex-row justify-between">
-          <Map />
+          <Map updateOption1={updateOption1} />
           <div className="px-4">
-            <ChartFour />
+            <ChartFour option1={option1} />
           </div>
         </div>
         <p className="pt-10">Solar Data: Solar API</p>
