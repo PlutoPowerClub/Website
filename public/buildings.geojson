@@ -3,12 +3,16 @@
   "name": "buildings",
   "crs": {
     "type": "name",
-    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+    "properties": {
+      "color": "red",
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
   },
   "features": [
     {
       "type": "Feature",
       "properties": {
+        "color": "green",
         "osm_id": 474422846,
         "building": "residential",
         "shop": null,
@@ -69,6 +73,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "green",
         "osm_id": 474422877,
         "building": "residential",
         "shop": null,
@@ -133,6 +138,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474422870,
         "building": "residential",
         "shop": null,
@@ -197,6 +203,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474422871,
         "building": "residential",
         "shop": null,
@@ -261,6 +268,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474422875,
         "building": "residential",
         "shop": null,
@@ -325,6 +333,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474422874,
         "building": "residential",
         "shop": null,
@@ -389,6 +398,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 208670607,
         "building": "supermarket",
         "shop": "supermarket",
@@ -459,6 +469,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 27208153,
         "building": "parking",
         "shop": null,
@@ -525,6 +536,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 526089405,
         "building": "residential",
         "shop": null,
@@ -595,6 +607,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 526089407,
         "building": "yes",
         "shop": null,
@@ -655,6 +668,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 526089409,
         "building": "yes",
         "shop": null,
@@ -717,6 +731,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 1028735149,
         "building": "yes",
         "shop": null,
@@ -777,6 +792,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 1028735152,
         "building": "yes",
         "shop": null,
@@ -837,6 +853,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 1028735153,
         "building": "yes",
         "shop": null,
@@ -899,6 +916,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 1028735154,
         "building": "yes",
         "shop": null,
@@ -959,6 +977,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 1028735155,
         "building": "yes",
         "shop": null,
@@ -1019,6 +1038,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 1028735151,
         "building": "yes",
         "shop": null,
@@ -1081,6 +1101,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 1028735150,
         "building": "yes",
         "shop": null,
@@ -1141,6 +1162,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420000,
         "building": "residential",
         "shop": null,
@@ -1201,6 +1223,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420055,
         "building": "residential",
         "shop": null,
@@ -1261,6 +1284,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419963,
         "building": "residential",
         "shop": null,
@@ -1321,6 +1345,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420017,
         "building": "residential",
         "shop": null,
@@ -1381,6 +1406,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420059,
         "building": "residential",
         "shop": null,
@@ -1443,6 +1469,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420033,
         "building": "residential",
         "shop": null,
@@ -1503,6 +1530,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420037,
         "building": "yes",
         "shop": null,
@@ -1563,6 +1591,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420035,
         "building": "residential",
         "shop": null,
@@ -1623,6 +1652,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419974,
         "building": "residential",
         "shop": null,
@@ -1683,6 +1713,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474422851,
         "building": "residential",
         "shop": null,
@@ -1743,6 +1774,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474422858,
         "building": "residential",
         "shop": null,
@@ -1805,6 +1837,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420001,
         "building": "residential",
         "shop": null,
@@ -1865,6 +1898,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420014,
         "building": "apartments",
         "shop": null,
@@ -1925,6 +1959,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420063,
         "building": "residential",
         "shop": null,
@@ -1987,6 +2022,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420048,
         "building": "residential",
         "shop": null,
@@ -2047,6 +2083,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420060,
         "building": "residential",
         "shop": null,
@@ -2109,6 +2146,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474422843,
         "building": "residential",
         "shop": null,
@@ -2169,6 +2207,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419958,
         "building": "residential",
         "shop": null,
@@ -2237,6 +2276,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 540642911,
         "building": "yes",
         "shop": null,
@@ -2299,6 +2339,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419985,
         "building": "residential",
         "shop": null,
@@ -2359,6 +2400,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420038,
         "building": "residential",
         "shop": null,
@@ -2419,6 +2461,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420018,
         "building": "yes",
         "shop": null,
@@ -2479,6 +2522,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420042,
         "building": "yes",
         "shop": null,
@@ -2540,6 +2584,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420041,
         "building": "garages",
         "shop": null,
@@ -2601,6 +2646,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419988,
         "building": "residential",
         "shop": null,
@@ -2661,6 +2707,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "green",
         "osm_id": 474420058,
         "building": "residential",
         "shop": null,
@@ -2723,6 +2770,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420002,
         "building": "residential",
         "shop": null,
@@ -2783,6 +2831,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419977,
         "building": "residential",
         "shop": null,
@@ -2843,6 +2892,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419994,
         "building": "residential",
         "shop": null,
@@ -2903,6 +2953,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420003,
         "building": "residential",
         "shop": null,
@@ -2963,6 +3014,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "green",
         "osm_id": 474420061,
         "building": "residential",
         "shop": null,
@@ -3025,6 +3077,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420051,
         "building": "residential",
         "shop": null,
@@ -3085,6 +3138,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420007,
         "building": "residential",
         "shop": null,
@@ -3145,6 +3199,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419992,
         "building": "residential",
         "shop": null,
@@ -3205,6 +3260,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420021,
         "building": "residential",
         "shop": null,
@@ -3265,6 +3321,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419973,
         "building": "residential",
         "shop": null,
@@ -3325,6 +3382,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "green",
         "osm_id": 474419989,
         "building": "yes",
         "shop": null,
@@ -3385,6 +3443,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419971,
         "building": "residential",
         "shop": null,
@@ -3445,6 +3504,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 547639828,
         "building": "house",
         "shop": null,
@@ -3505,6 +3565,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419964,
         "building": "yes",
         "shop": null,
@@ -3565,6 +3626,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420034,
         "building": "yes",
         "shop": null,
@@ -3625,6 +3687,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "green",
         "osm_id": 474420008,
         "building": "yes",
         "shop": null,
@@ -3685,6 +3748,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 928686431,
         "building": "house",
         "shop": null,
@@ -3745,6 +3809,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 928686430,
         "building": "house",
         "shop": null,
@@ -3805,6 +3870,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "green",
         "osm_id": 476701732,
         "building": "house",
         "shop": null,
@@ -3865,6 +3931,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 476701731,
         "building": "house",
         "shop": null,
@@ -3925,6 +3992,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "green",
         "osm_id": 474419996,
         "building": "yes",
         "shop": null,
@@ -3985,6 +4053,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "green",
         "osm_id": 476701734,
         "building": "house",
         "shop": null,
@@ -4045,6 +4114,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "green",
         "osm_id": 474419962,
         "building": "yes",
         "shop": null,
@@ -4105,6 +4175,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "green",
         "osm_id": 476701735,
         "building": "house",
         "shop": null,
@@ -4165,6 +4236,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "green",
         "osm_id": 476701737,
         "building": "house",
         "shop": null,
@@ -4225,6 +4297,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "green",
         "osm_id": 476701738,
         "building": "house",
         "shop": null,
@@ -4285,6 +4358,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 476701733,
         "building": "house",
         "shop": null,
@@ -4345,6 +4419,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 928686428,
         "building": "house",
         "shop": null,
@@ -4405,6 +4480,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420064,
         "building": "roof",
         "shop": null,
@@ -4467,6 +4543,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 928686427,
         "building": "yes",
         "shop": null,
@@ -4527,6 +4604,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 928686429,
         "building": "house",
         "shop": null,
@@ -4587,6 +4665,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420012,
         "building": "house",
         "shop": null,
@@ -4647,6 +4726,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420011,
         "building": "yes",
         "shop": null,
@@ -4714,6 +4794,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420049,
         "building": "residential",
         "shop": null,
@@ -4774,6 +4855,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420067,
         "building": "residential",
         "shop": null,
@@ -4838,6 +4920,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419983,
         "building": "residential",
         "shop": null,
@@ -4898,6 +4981,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420040,
         "building": "residential",
         "shop": null,
@@ -4958,6 +5042,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 704000832,
         "building": "yes",
         "shop": null,
@@ -5018,6 +5103,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419970,
         "building": "residential",
         "shop": null,
@@ -5078,6 +5164,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419967,
         "building": "residential",
         "shop": null,
@@ -5138,6 +5225,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419979,
         "building": "yes",
         "shop": null,
@@ -5198,6 +5286,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420020,
         "building": "residential",
         "shop": null,
@@ -5258,6 +5347,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420065,
         "building": "residential",
         "shop": null,
@@ -5320,6 +5410,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420069,
         "building": "residential",
         "shop": null,
@@ -5384,6 +5475,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 476701745,
         "building": "house",
         "shop": null,
@@ -5444,6 +5536,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 476701744,
         "building": "house",
         "shop": null,
@@ -5504,6 +5597,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638707542,
         "building": "yes",
         "shop": null,
@@ -5564,6 +5658,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419959,
         "building": "residential",
         "shop": null,
@@ -5634,6 +5729,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420071,
         "building": "residential",
         "shop": null,
@@ -5698,6 +5794,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474401346,
         "building": "residential",
         "shop": null,
@@ -5762,6 +5859,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474401321,
         "building": "yes",
         "shop": null,
@@ -5822,6 +5920,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474401294,
         "building": "residential",
         "shop": null,
@@ -5912,6 +6011,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420019,
         "building": "yes",
         "shop": null,
@@ -5972,6 +6072,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 476701739,
         "building": "house",
         "shop": null,
@@ -6032,6 +6133,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 476701740,
         "building": "house",
         "shop": null,
@@ -6092,6 +6194,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 476701743,
         "building": "house",
         "shop": null,
@@ -6152,6 +6255,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 476701742,
         "building": "house",
         "shop": null,
@@ -6212,6 +6316,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 476701741,
         "building": "house",
         "shop": null,
@@ -6272,6 +6377,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474419961,
         "building": "residential",
         "shop": null,
@@ -6354,6 +6460,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705846,
         "building": "yes",
         "shop": null,
@@ -6414,6 +6521,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420052,
         "building": "residential",
         "shop": null,
@@ -6474,6 +6582,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705847,
         "building": "yes",
         "shop": null,
@@ -6534,6 +6643,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705844,
         "building": "yes",
         "shop": null,
@@ -6594,6 +6704,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705843,
         "building": "yes",
         "shop": null,
@@ -6654,6 +6765,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705842,
         "building": "yes",
         "shop": null,
@@ -6714,6 +6826,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705845,
         "building": "yes",
         "shop": null,
@@ -6774,6 +6887,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705841,
         "building": "yes",
         "shop": null,
@@ -6834,6 +6948,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705839,
         "building": "yes",
         "shop": null,
@@ -6894,6 +7009,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705840,
         "building": "yes",
         "shop": null,
@@ -6954,6 +7070,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474420039,
         "building": "residential",
         "shop": null,
@@ -7014,6 +7131,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705831,
         "building": "yes",
         "shop": null,
@@ -7074,6 +7192,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705832,
         "building": "yes",
         "shop": null,
@@ -7134,6 +7253,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705830,
         "building": "yes",
         "shop": null,
@@ -7194,6 +7314,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474252226,
         "building": "residential",
         "shop": null,
@@ -7256,6 +7377,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474252225,
         "building": "residential",
         "shop": null,
@@ -7316,6 +7438,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 468297477,
         "building": "yes",
         "shop": null,
@@ -7379,6 +7502,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 529202745,
         "building": "retail",
         "shop": null,
@@ -7449,6 +7573,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 1028735196,
         "building": "yes",
         "shop": null,
@@ -7511,6 +7636,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 1028735197,
         "building": "apartments",
         "shop": null,
@@ -7571,6 +7697,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 1028735200,
         "building": "house",
         "shop": null,
@@ -7631,6 +7758,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 1028735199,
         "building": "house",
         "shop": null,
@@ -7691,6 +7819,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 1028735198,
         "building": "house",
         "shop": null,
@@ -7751,6 +7880,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 529202740,
         "building": "yes",
         "shop": null,
@@ -7811,6 +7941,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 123414386,
         "building": "yes",
         "shop": null,
@@ -7876,6 +8007,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 82461302,
         "building": "apartments",
         "shop": null,
@@ -7948,6 +8080,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 1028735202,
         "building": "yes",
         "shop": null,
@@ -8011,6 +8144,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 123414385,
         "building": "yes",
         "shop": null,
@@ -8075,6 +8209,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 529202741,
         "building": "yes",
         "shop": null,
@@ -8141,6 +8276,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 123414391,
         "building": "yes",
         "shop": null,
@@ -8203,6 +8339,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 123414388,
         "building": "yes",
         "shop": null,
@@ -8267,6 +8404,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 82461307,
         "building": "yes",
         "shop": null,
@@ -8329,6 +8467,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474252230,
         "building": "roof",
         "shop": null,
@@ -8394,6 +8533,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474252217,
         "building": "yes",
         "shop": null,
@@ -8460,6 +8600,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 123414389,
         "building": "apartments",
         "shop": null,
@@ -8535,6 +8676,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 8928196,
         "building": "supermarket",
         "shop": "supermarket",
@@ -8600,6 +8742,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474252219,
         "building": "residential",
         "shop": null,
@@ -8672,6 +8815,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705833,
         "building": "yes",
         "shop": null,
@@ -8732,6 +8876,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705837,
         "building": "yes",
         "shop": null,
@@ -8792,6 +8937,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705838,
         "building": "yes",
         "shop": null,
@@ -8852,6 +8998,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705835,
         "building": "yes",
         "shop": null,
@@ -8912,6 +9059,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705836,
         "building": "yes",
         "shop": null,
@@ -8972,6 +9120,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 638705834,
         "building": "yes",
         "shop": null,
@@ -9032,6 +9181,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474252227,
         "building": "residential",
         "shop": null,
@@ -9096,6 +9246,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474252223,
         "building": "residential",
         "shop": null,
@@ -9156,6 +9307,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474252222,
         "building": "residential",
         "shop": null,
@@ -9216,6 +9368,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 474252218,
         "building": "residential",
         "shop": null,
@@ -9284,6 +9437,7 @@
     {
       "type": "Feature",
       "properties": {
+        "color": "red",
         "osm_id": 44654015,
         "building": "yes",
         "shop": null,

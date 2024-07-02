@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 
 // Replace 'your_mapbox_access_token' with your actual Mapbox access token
@@ -7,6 +7,8 @@ mapboxgl.accessToken =
 
 const MapboxMap: React.FC = () => {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
+  const [selectedBuildings, setSelectedBuildings] = useState<string[]>([]); // State to track list of selected buildings
+  const [calculatingSolar, setCalculatingSolar] = useState(false); // State to control popup display
 
   useEffect(() => {
     if (mapContainerRef.current) {
@@ -37,11 +39,9 @@ const MapboxMap: React.FC = () => {
                 // Use a property-driven color expression
                 "fill-extrusion-color": [
                   "case",
-                  ["==", ["get", "color"], "red"],
-                  "#ae493f", // Red color
-                  ["==", ["get", "color"], "green"],
-                  "#4caf50", // Green color
-                  "#ccc", // Default color (shouldn't actually be used)
+                  ["in", ["get", "osm_id"], ["literal", selectedBuildings]],
+                  "green",
+                  "red",
                 ],
                 "fill-extrusion-height": 5, // Height of the building
                 "fill-extrusion-base": 0, // Base height of the building
@@ -59,29 +59,27 @@ const MapboxMap: React.FC = () => {
                 return;
               }
 
-              const feature = features[0];
-              const currentColor = feature.properties.color;
+              // Simulate calculating solar potential
+              setCalculatingSolar(true);
+              setTimeout(() => {
+                setCalculatingSolar(false);
+              }, 2000);
 
-              // Toggle color on click
-              const newColor = currentColor === "red" ? "green" : "red";
+              const clickedFeature = features[0];
+              const clickedBuildingId = clickedFeature?.properties?.osm_id;
 
-              // Update GeoJSON source
-              const updatedData = {
-                ...data,
-                features: data.features.map((f) =>
-                  f.properties.id === feature.properties.id
-                    ? {
-                        ...f,
-                        properties: {
-                          ...f.properties,
-                          color: newColor,
-                        },
-                      }
-                    : f,
-                ),
-              };
-
-              map.getSource("custom-data").setData(updatedData);
+              // Update selected buildings state
+              setSelectedBuildings((prevSelectedBuildings) => {
+                if (prevSelectedBuildings.includes(clickedBuildingId)) {
+                  // Deselect the building if it's already selected
+                  return prevSelectedBuildings.filter(
+                    (id) => id !== clickedBuildingId,
+                  );
+                } else {
+                  // Select the building if it's not selected
+                  return [...prevSelectedBuildings, clickedBuildingId];
+                }
+              });
             });
           })
           .catch((error) => {
@@ -92,10 +90,19 @@ const MapboxMap: React.FC = () => {
       // Clean up on unmount
       return () => map.remove();
     }
-  }, []);
+  }, [selectedBuildings]); // Include selectedBuildings in dependencies to trigger map layer repaint
 
   return (
-    <div ref={mapContainerRef} style={{ width: "100%", height: "400px" }} />
+    <>
+      <div ref={mapContainerRef} style={{ width: "100%", height: "400px" }} />
+      {calculatingSolar && (
+        <div className="popup absolute left-0 top-20 z-40 h-[100%] w-[100%] bg-white">
+          <p className="h-[100%] w-[100%] py-10 text-center text-2xl font-bold text-black">
+            Calculating solar potential...
+          </p>
+        </div>
+      )}
+    </>
   );
 };
 
