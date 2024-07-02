@@ -1,6 +1,4 @@
-- Make this reflect in the community energy dashboard
-- Explain that this is just a workaround cos you have to pay for the solar api.
 - Change favicon to starfish.
+- add endpoint to weather forecast
 - community cashback on the dashboard
-- Edit weather forecast component so it says something like "good time to switch your washing machine on"
 - some of buildings should be green on start on map.
