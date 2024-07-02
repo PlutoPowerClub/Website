@@ -1,12 +1,11 @@
 # StarFishEnergy
 
+Website for the Tech Zero x Kraken Hackathon 1-2 July 2024.
+Frontend: Jack Kershaw
+Backend: Zusana and Audrey
+
 ## Usage
 
-For the Modal web endpoints:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-modal serve api/example.py
-```
+npm install
+npm run dev
+localhost:3000
