@@ -49,8 +49,10 @@ const options: ApexOptions = {
   ],
 };
 
-const ChartFour: React.FC = () => {
-  const series = [65, 35];
+const ChartFour: React.FC<{ option1: number }> = ({ option1 }) => {
+  const series = [];
+  series[0] = option1;
+  series[1] = 100 - series[0];
 
   return (
     <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
@@ -113,7 +115,7 @@ const ChartFour: React.FC = () => {
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#bc4039]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
               <span> Grid </span>
-              <span> 35% </span>
+              <span> {series[1]}%</span>
             </p>
           </div>
         </div>
@@ -122,7 +124,7 @@ const ChartFour: React.FC = () => {
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#63c64f]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
               <span> Community </span>
-              <span> 65% </span>
+              <span> {series[0]}%</span>
             </p>
           </div>
         </div>

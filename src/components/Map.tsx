@@ -5,10 +5,15 @@ import mapboxgl from "mapbox-gl";
 mapboxgl.accessToken =
   "pk.eyJ1Ijoiam9uZXM1ODEiLCJhIjoiY2xwNzM4Y3JpMXZ1NjJrcWswNDFrbnl1ZiJ9.Ud2Oqbe9kgEmB3U3UOH98w";
 
-const MapboxMap: React.FC = () => {
+interface MapProps {
+  updateOption1: (newValue: number) => void;
+}
+
+const MapboxMap: React.FC<MapProps> = ({ updateOption1 }) => {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const [selectedBuildings, setSelectedBuildings] = useState<string[]>([]); // State to track list of selected buildings
   const [calculatingSolar, setCalculatingSolar] = useState(false); // State to control popup display
+  const [currentValue, setCurrentValue] = useState<number>(30); // Initial value for newValue
 
   useEffect(() => {
     if (mapContainerRef.current) {
@@ -61,6 +66,10 @@ const MapboxMap: React.FC = () => {
 
               // Simulate calculating solar potential
               setCalculatingSolar(true);
+              const randomValue = Math.floor(2 + Math.random() * 4);
+              const newValue = currentValue + 2 * randomValue;
+              setCurrentValue(newValue);
+              updateOption1(newValue);
               setTimeout(() => {
                 setCalculatingSolar(false);
               }, 2000);
@@ -90,7 +99,7 @@ const MapboxMap: React.FC = () => {
       // Clean up on unmount
       return () => map.remove();
     }
-  }, [selectedBuildings]); // Include selectedBuildings in dependencies to trigger map layer repaint
+  }, [selectedBuildings, currentValue]); // Include currentValue in dependencies to trigger map layer repaint
 
   return (
     <>

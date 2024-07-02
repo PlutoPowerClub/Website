@@ -5,6 +5,7 @@ import ChartFour from "../Charts/CommunityEnergy";
 import WeatherForecast from "../WeatherForecast";
 import InviteNeighbours from "../Invite Neighbours";
 
+const option1 = 30;
 const MainDashboard: React.FC = () => {
   return (
     <>
@@ -12,7 +13,7 @@ const MainDashboard: React.FC = () => {
         <WeatherForecast />
         <InviteNeighbours />
         <ChartThree />
-        <ChartFour />
+        <ChartFour option1={option1} />
       </div>
     </>
   );
