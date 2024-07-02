@@ -22,7 +22,7 @@ const endPoint =
 const dummyForecastData: ForecastData = {
   current: {
     time: "2024-07-01T12:00:00Z",
-    temperature_2m: 24,
+    temperature_2m: 17,
     cloud_cover: 20,
     weather_description: "Partly Cloudy",
   },
