@@ -1,8 +1,10 @@
 "use client";
-
+import dynamic from "next/dynamic";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
-import Map from "@/components/Map";
-import ChartFour from "@/components/Charts/CommunityEnergy";
+const Map = dynamic(() => import("@/components/Map"), { ssr: false });
+const ChartFour = dynamic(() => import("@/components/Charts/CommunityEnergy"), {
+  ssr: false,
+});
 import { useState } from "react";
 export default function Home() {
   const [option1, setOption1] = useState(30);
