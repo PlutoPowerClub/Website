@@ -24,7 +24,7 @@ export default function Home() {
             <ChartFour option1={option1} />
           </div>
         </div>
-        <p className="pt-10">Solar Data: Solar API</p>
+        <p className="mt-10 pt-2">Solar Data: Solar API</p>
       </DefaultLayout>
     </>
   );
