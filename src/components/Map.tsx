@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 
-// Replace 'your_mapbox_access_token' with your actual Mapbox access token
 mapboxgl.accessToken =
   "pk.eyJ1Ijoiam9uZXM1ODEiLCJhIjoiY2xwNzM4Y3JpMXZ1NjJrcWswNDFrbnl1ZiJ9.Ud2Oqbe9kgEmB3U3UOH98w";
 
@@ -11,8 +10,8 @@ interface MapProps {
 
 const MapboxMap: React.FC<MapProps> = ({ updateOption1 }) => {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
-  const [selectedBuildings, setSelectedBuildings] = useState<string[]>([]); // State to track list of selected buildings
-  const [calculatingSolar, setCalculatingSolar] = useState(false); // State to control popup display
+  const [selectedBuildings, setSelectedBuildings] = useState<string[]>([]);
+  const [calculatingSolar, setCalculatingSolar] = useState(false);
   const [currentValue, setCurrentValue] = useState<number>(30); // Initial value for newValue
 
   useEffect(() => {
@@ -66,8 +65,11 @@ const MapboxMap: React.FC<MapProps> = ({ updateOption1 }) => {
 
               // Simulate calculating solar potential
               setCalculatingSolar(true);
-              const randomValue = Math.floor(2 + Math.random() * 4);
-              const newValue = currentValue + 2 * randomValue;
+
+              // get the solar value of the clicked building from
+              const randomValue = 10;
+
+              const newValue = currentValue + randomValue;
               setCurrentValue(newValue);
               updateOption1(newValue);
               setTimeout(() => {
