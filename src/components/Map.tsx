@@ -8,11 +8,16 @@ interface MapProps {
   updateOption1: (newValue: number) => void;
 }
 
+interface SolarApiResponse {
+  yearlyEnergyDcKwh: number;
+}
+
 const MapboxMap: React.FC<MapProps> = ({ updateOption1 }) => {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const [selectedBuildings, setSelectedBuildings] = useState<string[]>([]);
   const [calculatingSolar, setCalculatingSolar] = useState(false);
   const [currentValue, setCurrentValue] = useState<number>(30); // Initial value for newValue
+  const [solarData, setSolarData] = useState<SolarApiResponse | null>(null);
 
   useEffect(() => {
     if (mapContainerRef.current) {
@@ -65,11 +70,29 @@ const MapboxMap: React.FC<MapProps> = ({ updateOption1 }) => {
 
               // Simulate calculating solar potential
               setCalculatingSolar(true);
+              const solarData = 10;
+              /* in future get this value (a percentage of the solar potential/total energy use) from SolarAPI, or from JSON (https://dev.to/this-is-learning/reading-local-json-data-with-nextjs-part-5-59le)
 
-              // get the solar value of the clicked building from
-              const randomValue = 10;
+                  const data: SolarApiResponse = await response.json();
+                  if (timeScale=Daily)
+                    const SolarPotential = (data.yearlyEnergyDcKwh/365)/energyusetotalDaily* 100
+                  else if (timeScale=Monthly)
+                    const SolarPotential = (data.yearlyEnergyDcKwh/12)/energyusetotalMonthly * 100
+                   else if (timeScale=Yearly)
+                    const SolarPotential = data.yearlyEnergyDcKwh/energyusetotalYearly * 100
 
-              const newValue = currentValue + randomValue;
+
+                  setSolarData(SolarPotential);
+                } catch (error) {
+                  console.error("Error fetching solar data:", error);
+                }
+              };
+
+              fetchSolarData();
+
+              */
+
+              const newValue = currentValue + solarData;
               setCurrentValue(newValue);
               updateOption1(newValue);
               setTimeout(() => {
