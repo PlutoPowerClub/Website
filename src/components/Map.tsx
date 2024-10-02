@@ -67,8 +67,6 @@ const MapboxMap: React.FC<MapProps> = ({ updateOption1 }) => {
               if (!features.length) {
                 return;
               }
-
-              // Simulate calculating solar potential
               setCalculatingSolar(true);
               const solarData = 10;
               /* in future get this value (a percentage of the solar potential/total energy use) from SolarAPI, or from JSON (https://dev.to/this-is-learning/reading-local-json-data-with-nextjs-part-5-59le)
