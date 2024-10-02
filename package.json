@@ -13,7 +13,6 @@
     "axios": "^1.7.2",
     "flatpickr": "^4.6.13",
     "jsvectormap": "^1.6.0",
-    "mapbox-gl": "^3.4.0",
     "maplibre-gl": "^4.7.1",
     "next": "^14.2.4",
     "react": "^18",
