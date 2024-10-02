@@ -68,7 +68,7 @@ const Map: React.FC<MapProps> = ({ updateOption1 }) => {
 
             setTimeout(() => {
               setCalculatingSolar(false);
-            }, 2000);
+            }, 4000);
 
             const clickedFeature = features[0];
             const clickedBuildingId = clickedFeature?.properties?.osm_id;
@@ -91,10 +91,33 @@ const Map: React.FC<MapProps> = ({ updateOption1 }) => {
   return (
     <>
       {calculatingSolar && (
-        <div className="popup absolute left-0 top-20 z-40 h-[100%] w-[100%] bg-white">
-          <p className="h-[100%] w-[100%] py-10 text-center text-2xl font-bold text-black">
-            Calculating solar potential...
-          </p>
+        <div className="popup absolute z-40 mx-auto flex h-[100%] w-[100%] items-center justify-center bg-white p-10">
+          <div className="text-center">
+            <p className="py-10 text-4xl font-bold text-black">
+              {/* loading icon - can be moved to separate component later*/}
+              <svg
+                className="mx-auto h-10 w-10 animate-spin text-black"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                ></path>
+              </svg>
+              Calculating solar potential...
+            </p>
+          </div>
         </div>
       )}
       <div id="map" style={{ height: "500px", width: "100%" }} />
