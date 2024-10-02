@@ -49,26 +49,24 @@ const WeatherForecast: React.FC = () => {
   }, []);
 
   return (
-    <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
+    <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default sm:px-7.5 xl:col-span-5">
       {forecastData && forecastData.current ? (
         <div>
           <div className="mb-4 flex items-center justify-between">
             <div>
-              <h6 className="text-xl font-bold text-black dark:text-white">
-                Current Weather
-              </h6>
+              <h6 className="text-xl font-bold text-black ">Current Weather</h6>
             </div>
             <div className="pt-2 text-right">
-              <p className="text-lg font-medium text-black dark:text-white">
+              <p className="text-lg font-medium text-black ">
                 {forecastData.current.temperature_2m}°C
               </p>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
+              <p className="text-gray-600 text-sm">
                 {forecastData.current.weather_description}
               </p>
             </div>
           </div>
           {/* Fetch from endpoint here */}
-          <p className="dark:text-gray-400 text-lg font-bold text-black">
+          <p className="text-lg text-black">
             Consider waiting for weather to improve before using lots of energy.
           </p>
         </div>

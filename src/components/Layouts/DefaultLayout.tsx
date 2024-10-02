@@ -2,19 +2,19 @@
 
 export default function DefaultLayout({
   children,
+  pageName,
 }: {
   children: React.ReactNode;
+  pageName: string;
 }) {
   return (
     <>
-      <div className="flex h-screen overflow-hidden">
-        <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
-          <main>
-            <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
-              {children}
-            </div>
-          </main>
+      <div className="relative w-full overflow-x-hidden px-10">
+        <div className="mx-auto flex flex-row justify-between py-8 text-5xl font-bold text-black">
+          <h1>Pluto</h1>
+          <h1>{pageName}</h1>
         </div>
+        <main>{children}</main>
       </div>
     </>
   );

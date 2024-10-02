@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <>
-      <DefaultLayout>
+      <DefaultLayout pageName="Community">
         <p className="py-5 text-xl text-black">
           Click to add a neighbour's building to your community solar map.
         </p>

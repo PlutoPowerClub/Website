@@ -9,11 +9,10 @@ const Cash = () => {
       </h5>
       <p>
         The more energy your community makes, the more cash you get for
-        community projects and groceries.
+        community projects!
       </p>
       <ul className="flex flex-col pt-1 text-lg text-black">
         <li>£10,000 for community garden</li>
-        <li>£10 for each community member in Pret vouchers</li>
       </ul>
     </div>
   );
