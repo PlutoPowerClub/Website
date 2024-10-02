@@ -11,7 +11,7 @@ const ReactApexChart = dynamic(() => import("react-apexcharts"), {
 const options: ApexOptions = {
   colors: ["#3C50E0", "#80CAEE"],
   chart: {
-    fontFamily: "Satoshi, sans-serif",
+    fontFamily: "Barlow, sans-serif",
     type: "bar",
     height: 335,
     stacked: true,
@@ -55,7 +55,7 @@ const options: ApexOptions = {
   legend: {
     position: "top",
     horizontalAlign: "left",
-    fontFamily: "Satoshi",
+    fontFamily: "Barlow",
     fontWeight: 500,
     fontSize: "14px",
 

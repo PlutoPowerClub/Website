@@ -8,7 +8,7 @@ interface ChartThreeState {
 
 const options: ApexOptions = {
   chart: {
-    fontFamily: "Satoshi, sans-serif",
+    fontFamily: "Barlow, sans-serif",
     type: "donut",
   },
   colors: ["#7dc35f", "#ae493f", "#dfb641"],
