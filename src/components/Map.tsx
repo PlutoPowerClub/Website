@@ -1,8 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import mapboxgl from "mapbox-gl";
-
-mapboxgl.accessToken =
-  "pk.eyJ1Ijoiam9uZXM1ODEiLCJhIjoiY2xwNzM4Y3JpMXZ1NjJrcWswNDFrbnl1ZiJ9.Ud2Oqbe9kgEmB3U3UOH98w";
+import React, { useEffect, useState } from "react";
+import maplibregl from "maplibre-gl";
+import "maplibre-gl/dist/maplibre-gl.css";
 
 interface MapProps {
   updateOption1: (newValue: number) => void;
@@ -12,121 +10,86 @@ interface SolarApiResponse {
   yearlyEnergyDcKwh: number;
 }
 
-const MapboxMap: React.FC<MapProps> = ({ updateOption1 }) => {
-  const mapContainerRef = useRef<HTMLDivElement | null>(null);
+const Map: React.FC<MapProps> = ({ updateOption1 }) => {
   const [selectedBuildings, setSelectedBuildings] = useState<string[]>([]);
   const [calculatingSolar, setCalculatingSolar] = useState(false);
-  const [currentValue, setCurrentValue] = useState<number>(30); // Initial value for newValue
+  const [currentValue, setCurrentValue] = useState<number>(30);
   const [solarData, setSolarData] = useState<SolarApiResponse | null>(null);
 
   useEffect(() => {
-    if (mapContainerRef.current) {
-      const map = new mapboxgl.Map({
-        container: mapContainerRef.current,
-        style: "mapbox://styles/mapbox/streets-v11", // Style of the map
-        center: [-1.2982167, 50.7029], // Initial map center in [lng, lat]
-        zoom: 18, // Initial zoom level
-      });
+    const map = new maplibregl.Map({
+      container: "map",
+      style: "https://tiles.openfreemap.org/styles/bright",
+      center: [-1.2982167, 50.7029],
+      zoom: 18,
+    });
 
-      map.on("load", () => {
-        // Load GeoJSON file
-        fetch("/buildings.geojson")
-          .then((response) => response.json())
-          .then((data) => {
-            // Add GeoJSON data as a source
-            map.addSource("custom-data", {
-              type: "geojson",
-              data: data,
-            });
-
-            // Add a layer to display the building GeoJSON data as 3D extrusions
-            map.addLayer({
-              id: "custom-layer",
-              type: "fill-extrusion",
-              source: "custom-data",
-              paint: {
-                // Use a property-driven color expression
-                "fill-extrusion-color": [
-                  "case",
-                  ["in", ["get", "osm_id"], ["literal", selectedBuildings]],
-                  "green",
-                  "red",
-                ],
-                "fill-extrusion-height": 5, // Height of the building
-                "fill-extrusion-base": 0, // Base height of the building
-                "fill-extrusion-opacity": 0.6, // Opacity of the building
-              },
-            });
-
-            // Add click event listener to toggle building color
-            map.on("click", "custom-layer", (e) => {
-              const features = map.queryRenderedFeatures(e.point, {
-                layers: ["custom-layer"],
-              });
-
-              if (!features.length) {
-                return;
-              }
-              setCalculatingSolar(true);
-              const solarData = 10;
-              /* in future get this value (a percentage of the solar potential/total energy use) from SolarAPI, or from JSON (https://dev.to/this-is-learning/reading-local-json-data-with-nextjs-part-5-59le)
-
-                  const data: SolarApiResponse = await response.json();
-                  if (timeScale=Daily)
-                    const SolarPotential = (data.yearlyEnergyDcKwh/365)/energyusetotalDaily* 100
-                  else if (timeScale=Monthly)
-                    const SolarPotential = (data.yearlyEnergyDcKwh/12)/energyusetotalMonthly * 100
-                   else if (timeScale=Yearly)
-                    const SolarPotential = data.yearlyEnergyDcKwh/energyusetotalYearly * 100
-
-
-                  setSolarData(SolarPotential);
-                } catch (error) {
-                  console.error("Error fetching solar data:", error);
-                }
-              };
-
-              fetchSolarData();
-
-              */
-
-              const newValue = currentValue + solarData;
-              setCurrentValue(newValue);
-              updateOption1(newValue);
-              setTimeout(() => {
-                setCalculatingSolar(false);
-              }, 2000);
-
-              const clickedFeature = features[0];
-              const clickedBuildingId = clickedFeature?.properties?.osm_id;
-
-              // Update selected buildings state
-              setSelectedBuildings((prevSelectedBuildings) => {
-                if (prevSelectedBuildings.includes(clickedBuildingId)) {
-                  // Deselect the building if it's already selected
-                  return prevSelectedBuildings.filter(
-                    (id) => id !== clickedBuildingId,
-                  );
-                } else {
-                  // Select the building if it's not selected
-                  return [...prevSelectedBuildings, clickedBuildingId];
-                }
-              });
-            });
-          })
-          .catch((error) => {
-            console.error("Error loading GeoJSON:", error);
+    map.on("load", () => {
+      // Load GeoJSON file
+      fetch("/buildings.geojson")
+        .then((response) => response.json())
+        .then((data) => {
+          map.addSource("custom-data", {
+            type: "geojson",
+            data: data,
           });
-      });
 
-      // Clean up on unmount
-      return () => map.remove();
-    }
-  }, [selectedBuildings, currentValue]); // Include currentValue in dependencies to trigger map layer repaint
+          map.addLayer({
+            id: "custom-layer",
+            type: "fill-extrusion",
+            source: "custom-data",
+            paint: {
+              "fill-extrusion-color": [
+                "case",
+                ["in", ["get", "osm_id"], ["literal", selectedBuildings]],
+                "green",
+                "red",
+              ],
+              "fill-extrusion-height": 5,
+              "fill-extrusion-base": 0,
+              "fill-extrusion-opacity": 0.6,
+            },
+          });
+
+          map.on("click", "custom-layer", (e) => {
+            const features = map.queryRenderedFeatures(e.point, {
+              layers: ["custom-layer"],
+            });
+
+            if (!features.length) {
+              return;
+            }
+
+            setCalculatingSolar(true);
+            const solarData = 10; // Simulate solar potential calculation
+            const newValue = currentValue + solarData;
+            setCurrentValue(newValue);
+            updateOption1(newValue);
+
+            setTimeout(() => {
+              setCalculatingSolar(false);
+            }, 2000);
+
+            const clickedFeature = features[0];
+            const clickedBuildingId = clickedFeature?.properties?.osm_id;
+
+            setSelectedBuildings((prevSelectedBuildings) =>
+              prevSelectedBuildings.includes(clickedBuildingId)
+                ? prevSelectedBuildings.filter((id) => id !== clickedBuildingId)
+                : [...prevSelectedBuildings, clickedBuildingId],
+            );
+          });
+        })
+        .catch((error) => {
+          console.error("Error loading GeoJSON:", error);
+        });
+    });
+
+    return () => map.remove();
+  }, [selectedBuildings, currentValue, updateOption1]);
 
   return (
     <>
-      <div ref={mapContainerRef} style={{ width: "100%", height: "800px" }} />
       {calculatingSolar && (
         <div className="popup absolute left-0 top-20 z-40 h-[100%] w-[100%] bg-white">
           <p className="h-[100%] w-[100%] py-10 text-center text-2xl font-bold text-black">
@@ -134,8 +97,9 @@ const MapboxMap: React.FC<MapProps> = ({ updateOption1 }) => {
           </p>
         </div>
       )}
+      <div id="map" style={{ height: "500px", width: "100%" }} />
     </>
   );
 };
 
-export default MapboxMap;
+export default Map;
