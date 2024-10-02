@@ -128,7 +128,7 @@ const MapboxMap: React.FC<MapProps> = ({ updateOption1 }) => {
 
   return (
     <>
-      <div ref={mapContainerRef} style={{ width: "100%", height: "400px" }} />
+      <div ref={mapContainerRef} style={{ width: "100%", height: "800px" }} />
       {calculatingSolar && (
         <div className="popup absolute left-0 top-20 z-40 h-[100%] w-[100%] bg-white">
           <p className="h-[100%] w-[100%] py-10 text-center text-2xl font-bold text-black">

@@ -15,16 +15,22 @@ export default function Home() {
   return (
     <>
       <DefaultLayout pageName="Community">
-        <p className="py-5 text-xl text-black">
-          Click to add a neighbour's building to your community solar map.
-        </p>
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-col justify-between gap-8 lg:flex-row lg:gap-12">
           <Map updateOption1={updateOption1} />
-          <div className="px-4">
+          <div className="flex flex-col">
             <ChartFour option1={option1} />
+            <div className="mt-0 py-10">
+              <h1 className="mb-4 text-4xl font-bold text-black">
+                Build a Community
+              </h1>
+              <p className="text-gray-700 text-lg lg:text-xl">
+                Tap on the map to add a neighbour's house to the solar map and
+                see your community's energy use change.
+              </p>
+            </div>
           </div>
         </div>
-        <p className="mt-10 pt-2">Solar Data: Solar API</p>
+        <div className="mx-auto max-w-4xl py-12 lg:py-20"></div>
       </DefaultLayout>
     </>
   );

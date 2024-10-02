@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function DefaultLayout({
   children,
   pageName,
@@ -10,8 +12,10 @@ export default function DefaultLayout({
   return (
     <>
       <div className="relative w-full overflow-x-hidden px-10">
-        <div className="mx-auto flex flex-row justify-between py-8 text-5xl font-bold text-black">
-          <h1>Pluto</h1>
+        <div className="mx-auto flex flex-row justify-between py-8 text-6xl font-bold text-black">
+          <Link href="/">
+            <h1>Pluto</h1>
+          </Link>
           <h1>{pageName}</h1>
         </div>
         <main>{children}</main>
