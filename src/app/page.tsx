@@ -1,9 +1,8 @@
 "use client";
 import Dynamic from "next/dynamic";
-const MainDashboard = Dynamic(
-  () => import("@/components/Dashboard/MainDashboard"),
-  { ssr: false },
-);
+const MainDashboard = Dynamic(() => import("@/components/Dashboard"), {
+  ssr: false,
+});
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 
 export default function Home() {
