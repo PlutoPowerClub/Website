@@ -11,8 +11,8 @@ export default function DefaultLayout({
 }) {
   return (
     <>
-      <div className="relative w-full overflow-x-hidden px-10 py-2">
-        <div className="mx-auto flex flex-row justify-between pb-6 pt-3 text-6xl font-bold text-black">
+      <div className="relative w-full overflow-x-hidden px-10">
+        <div className="flex flex-row justify-between py-4 text-6xl font-bold text-black">
           <Link href="/">
             <h1>Pluto</h1>
           </Link>

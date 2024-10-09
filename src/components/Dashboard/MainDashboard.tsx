@@ -10,7 +10,7 @@ const option1 = 30;
 const MainDashboard: React.FC = () => {
   return (
     <>
-      <div className="grid w-full grid-cols-10 gap-4">
+      <div className="grid w-full grid-cols-10 gap-2">
         <WeatherForecast />
         <InviteNeighbours />
         <ChartThree />
