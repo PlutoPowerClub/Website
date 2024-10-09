@@ -9,7 +9,7 @@ import CommunityBuild from "@/components/CommunityBuild";
 import CommunityShare from "@/components/CommunityShare";
 import { useState } from "react";
 export default function Home() {
-  const [option1, setOption1] = useState(30);
+  const [communityGridEnergy, setOption1] = useState(30);
   const updateOption1 = (newValue: number) => {
     setOption1(newValue);
   };
@@ -21,7 +21,7 @@ export default function Home() {
           <Map updateOption1={updateOption1} />
           <div className="flex flex-col gap-2">
             <CommunityBuild />
-            <ChartFour option1={option1} />
+            <ChartFour communityGridEnergy={communityGridEnergy} />
             <CommunityShare />
           </div>
         </div>

@@ -46,7 +46,10 @@ const options: ApexOptions = {
 };
 
 const ChartThree: React.FC = () => {
-  const series = [60, 20, 20];
+  const houseCommunityEnergy = 60;
+  const houseGridEnergy = 20;
+  const houseIndividualEnergy = 20;
+  const series = [houseCommunityEnergy, houseGridEnergy, houseIndividualEnergy];
 
   return (
     <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
@@ -69,7 +72,7 @@ const ChartThree: React.FC = () => {
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#63c64f]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
               <span> Community </span>
-              <span> 60% </span>
+              <span> {houseCommunityEnergy}% </span>
             </p>
           </div>
         </div>
@@ -78,7 +81,7 @@ const ChartThree: React.FC = () => {
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#ae493f] "></span>
             <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
               <span> Grid </span>
-              <span> 20% </span>
+              <span> {houseGridEnergy}% </span>
             </p>
           </div>
         </div>
@@ -87,7 +90,7 @@ const ChartThree: React.FC = () => {
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#d7a21c]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
               <span> Individual </span>
-              <span> 20% </span>
+              <span> {houseIndividualEnergy}% </span>
             </p>
           </div>
         </div>

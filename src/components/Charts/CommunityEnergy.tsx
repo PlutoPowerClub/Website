@@ -44,10 +44,13 @@ const options: ApexOptions = {
   ],
 };
 
-const ChartFour: React.FC<{ option1: number }> = ({ option1 }) => {
+const ChartFour: React.FC<{ communityGridEnergy: number }> = ({
+  communityGridEnergy,
+}) => {
   const series = [];
-  series[0] = option1;
+  series[0] = communityGridEnergy;
   series[1] = 100 - series[0];
+  const communityCommunityEnergy = series[1];
 
   return (
     <div className="px- col-span-12 rounded-sm border border-stroke bg-white pb-2 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
@@ -71,7 +74,7 @@ const ChartFour: React.FC<{ option1: number }> = ({ option1 }) => {
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#bc4039]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
               <span> Grid </span>
-              <span> {series[1]}%</span>
+              <span> {communityGridEnergy}%</span>
             </p>
           </div>
         </div>
@@ -80,7 +83,7 @@ const ChartFour: React.FC<{ option1: number }> = ({ option1 }) => {
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#63c64f]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
               <span> Community </span>
-              <span> {series[0]}%</span>
+              <span> {communityCommunityEnergy}%</span>
             </p>
           </div>
         </div>
