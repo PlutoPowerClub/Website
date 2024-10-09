@@ -1,6 +1,5 @@
 "use client";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
-import dynamic from "next/dynamic";
 import React from "react";
 
 const Chart: React.FC = () => {
