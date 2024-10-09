@@ -19,10 +19,6 @@ const InviteNeighbours = () => {
           </button>
         </Link>
       </div>
-      <p>
-        Tap on the map to add a neighbour’s house to the solar map and see your
-        community’s energy use change.{" "}
-      </p>
     </div>
   );
 };
