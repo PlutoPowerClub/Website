@@ -15,11 +15,10 @@ export default function Home() {
   return (
     <>
       <DefaultLayout pageName="Community">
-        <div className="flex h-screen flex-col justify-between gap-8 lg:flex-row lg:gap-12">
+        <div className="flex flex-col justify-between gap-8 lg:flex-row lg:gap-12">
           <Map updateOption1={updateOption1} />
-          <div className="flex flex-col">
-            <ChartFour option1={option1} />
-            <div className="mt-0 py-10">
+          <div className="flex flex-col gap-10">
+            <div className=" mt-0 rounded-sm border border-stroke bg-white bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 ">
               <h1 className="mb-4 text-4xl font-bold text-black">
                 Build a Community
               </h1>
@@ -28,9 +27,9 @@ export default function Home() {
                 see your community's energy use change.
               </p>
             </div>
+            <ChartFour option1={option1} />
           </div>
         </div>
-        <div className="mx-auto max-w-4xl py-12 lg:py-20"></div>
       </DefaultLayout>
     </>
   );

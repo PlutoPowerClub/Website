@@ -119,7 +119,7 @@ const Map: React.FC<MapProps> = ({ updateOption1 }) => {
           </div>
         </div>
       )}
-      <div id="map" style={{ height: "500px", width: "100%" }} />
+      <div id="map" style={{ height: "40rem", width: "80%" }} />
     </>
   );
 };
