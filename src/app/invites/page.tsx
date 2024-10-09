@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <DefaultLayout pageName="Community">
-        <div className="flex flex-col justify-between gap-8 lg:flex-row lg:gap-12">
+        <div className="flex h-screen flex-col justify-between gap-8 lg:flex-row lg:gap-12">
           <Map updateOption1={updateOption1} />
           <div className="flex flex-col">
             <ChartFour option1={option1} />

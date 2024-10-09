@@ -61,7 +61,7 @@ const Map: React.FC<MapProps> = ({ updateOption1 }) => {
             }
 
             setCalculatingSolar(true);
-            const solarData = 10; // Simulate solar potential calculation
+            const solarData = 10;
             const newValue = currentValue + solarData;
             setCurrentValue(newValue);
             updateOption1(newValue);
@@ -91,12 +91,11 @@ const Map: React.FC<MapProps> = ({ updateOption1 }) => {
   return (
     <>
       {calculatingSolar && (
-        <div className="popup absolute z-40 mx-auto flex h-[100%] w-[100%] items-center justify-center bg-white p-10">
+        <div className="popup absolute left-0 z-40 flex h-[100%] w-[100%] justify-center bg-white p-10">
           <div className="text-center">
             <p className="py-10 text-4xl font-bold text-black">
-              {/* loading icon - can be moved to separate component later*/}
               <svg
-                className="mx-auto h-10 w-10 animate-spin text-black"
+                className="mx-auto mb-5 h-10 w-10 animate-spin text-black"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
