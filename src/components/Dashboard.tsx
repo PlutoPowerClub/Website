@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import ChartThree from "../lib/features/householdEnergy/HouseholdEnergy";
-import ChartFour from "../lib/features/communityEnergy/CommunityEnergy";
+import HouseholdEnergyChart from "../lib/features/householdEnergy/HouseholdEnergy";
+import CommunityEnergyChart from "../lib/features/communityEnergy/CommunityEnergy";
 import WeatherForecast from "./WeatherForecast";
 import InviteNeighbours from "./Invite Neighbours";
 import Cash from "./Cash";
@@ -11,11 +11,11 @@ const MainDashboard: React.FC = () => {
   const [communityGridEnergy, setCommunityGridEnergy] = useState(30);
   return (
     <>
-      <div className="grid w-full grid-cols-10 gap-2">
+      <div className="grid w-full grid-cols-10 gap-5">
         <WeatherForecast />
         <InviteNeighbours />
-        <ChartThree />
-        <ChartFour communityGridEnergy={communityGridEnergy} />
+        <HouseholdEnergyChart />
+        <CommunityEnergyChart />
         <Cash />
       </div>
     </>

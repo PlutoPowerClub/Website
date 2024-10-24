@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 import DefaultLayout from "@/app/DefaultLayout";
 import Map from "@/components/Map";
-const ChartFour = dynamic(
+const CommunityEnergyChart = dynamic(
   () => import("@/lib/features/communityEnergy/CommunityEnergy"),
   {
     ssr: false,
@@ -18,7 +18,7 @@ export default function Home() {
           <Map />
           <div className="flex flex-col gap-2">
             <CommunityBuild />
-            <ChartFour />
+            <CommunityEnergyChart />
             <CommunityShare />
           </div>
         </div>

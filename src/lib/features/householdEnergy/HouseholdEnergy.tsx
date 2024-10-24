@@ -47,7 +47,7 @@ const options: ApexOptions = {
   ],
 };
 
-const ChartThree: React.FC = () => {
+const HouseholdEnergyChart: React.FC = () => {
   let householdCommunityEnergy: number =
     householdEnergyValues.householdCommunityEnergy.initialValue;
   let householdGridEnergy: number =
@@ -108,4 +108,4 @@ const ChartThree: React.FC = () => {
   );
 };
 
-export default ChartThree;
+export default HouseholdEnergyChart;

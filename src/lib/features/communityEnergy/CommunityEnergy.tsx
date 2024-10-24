@@ -46,7 +46,7 @@ const options: ApexOptions = {
   ],
 };
 
-const ChartFour = () => {
+const CommunityEnergyChart = () => {
   let communityGridEnergy: number =
     communityEnergyValues.communityGridEnergy.initialValue;
   let communityCommunityEnergy: number =
@@ -93,4 +93,4 @@ const ChartFour = () => {
   );
 };
 
-export default ChartFour;
+export default CommunityEnergyChart;
