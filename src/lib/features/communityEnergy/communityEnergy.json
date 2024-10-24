@@ -1,0 +1,10 @@
+{
+  "communityGridEnergy": {
+    "initialValue": 30,
+    "description": "Percentage of community grid energy usage"
+  },
+  "communityCommunityEnergy": {
+    "initialValue": 70,
+    "description": "Percentage of community energy usage that comes from the community"
+  }
+}

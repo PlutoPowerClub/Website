@@ -1,4 +1,6 @@
-- Convert charts to receive json which is stored in Redux. Use Redux persist to persist databse between sessions.
+- which is stored in Redux.
+  - NextJS Redux: [guide here](https://redux.js.org/usage/nextjs) and [here](https://blog.logrocket.com/use-redux-next-js/#creating-slice)
+  - Use [Redux persist](https://blog.logrocket.com/persist-state-redux-persist-redux-toolkit-react/) to persist values between sessions.
 - Zuzana’s stuff:
   - connect solar api potential (at least stored json)
   - work out how to integrate these python functions within js. Might be easiest to just rewrite as js

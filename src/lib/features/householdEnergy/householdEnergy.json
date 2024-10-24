@@ -1,0 +1,14 @@
+{
+  "householdCommunityEnergy": {
+    "initialValue": 60,
+    "description": "Percentage of household energy usage from community renewable sources"
+  },
+  "householdGridEnergy": {
+    "initialValue": 20,
+    "description": "Percentage of household energy usage from grid"
+  },
+  "householdIndividualEnergy": {
+    "initialValue": 20,
+    "description": "Percentage of household energy usage from individual renewable sources"
+  }
+}

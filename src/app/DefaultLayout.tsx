@@ -12,7 +12,7 @@ export default function DefaultLayout({
   return (
     <>
       <div className="relative w-full overflow-x-hidden px-10">
-        <div className="flex flex-row justify-between py-4 text-6xl font-bold text-black">
+        <div className="flex flex-row justify-between py-10 text-6xl font-bold text-black">
           <Link href="/">
             <h1>Pluto</h1>
           </Link>

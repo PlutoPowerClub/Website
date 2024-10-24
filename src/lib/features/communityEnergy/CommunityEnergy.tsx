@@ -1,6 +1,8 @@
 import { ApexOptions } from "apexcharts";
 import ReactApexChart from "react-apexcharts";
 
+import communityEnergyValues from "./communityEnergy.json";
+
 const options: ApexOptions = {
   chart: {
     fontFamily: "Barlow, sans-serif",
@@ -44,13 +46,12 @@ const options: ApexOptions = {
   ],
 };
 
-const ChartFour: React.FC<{ communityGridEnergy: number }> = ({
-  communityGridEnergy,
-}) => {
-  const series = [];
-  series[0] = communityGridEnergy;
-  series[1] = 100 - series[0];
-  const communityCommunityEnergy = series[1];
+const ChartFour = () => {
+  let communityGridEnergy: number =
+    communityEnergyValues.communityGridEnergy.initialValue;
+  let communityCommunityEnergy: number =
+    communityEnergyValues.communityCommunityEnergy.initialValue;
+  let series = [communityGridEnergy, communityCommunityEnergy];
 
   return (
     <div className="px- col-span-12 rounded-sm border border-stroke bg-white pb-2 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
