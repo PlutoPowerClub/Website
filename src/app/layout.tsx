@@ -56,7 +56,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="Pluto" />
         <meta
           name="twitter:description"
-          content="Campaign for free public transport in London"
+          content="Open Source Energy Dashboard"
         />
         {/* <meta name="twitter:image" content="/images/banner-draft.png" /> */}
         {/* Open Graph Meta Tags */}
