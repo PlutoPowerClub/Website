@@ -2,15 +2,11 @@ import React, { useEffect, useState } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
-interface MapProps {
-  updateOption1: (newValue: number) => void;
-}
-
 interface SolarApiResponse {
   yearlyEnergyDcKwh: number;
 }
 
-const Map: React.FC<MapProps> = ({ updateOption1 }) => {
+const Map: React.FC = () => {
   const [selectedBuildings, setSelectedBuildings] = useState<string[]>([]);
   const [calculatingSolar, setCalculatingSolar] = useState(false);
   const [currentValue, setCurrentValue] = useState<number>(30);
@@ -64,7 +60,6 @@ const Map: React.FC<MapProps> = ({ updateOption1 }) => {
             const solarData = 10;
             const newValue = currentValue + solarData;
             setCurrentValue(newValue);
-            updateOption1(newValue);
 
             setTimeout(() => {
               setCalculatingSolar(false);
@@ -86,7 +81,7 @@ const Map: React.FC<MapProps> = ({ updateOption1 }) => {
     });
 
     return () => map.remove();
-  }, [selectedBuildings, currentValue, updateOption1]);
+  }, [selectedBuildings, currentValue]);
 
   return (
     <>

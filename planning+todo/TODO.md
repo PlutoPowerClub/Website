@@ -1,4 +1,4 @@
-- which is stored in Redux.
+- Use JSON which is stored in Redux state.
   - NextJS Redux: [guide here](https://redux.js.org/usage/nextjs) and [here](https://blog.logrocket.com/use-redux-next-js/#creating-slice)
   - Use [Redux persist](https://blog.logrocket.com/persist-state-redux-persist-redux-toolkit-react/) to persist values between sessions.
 - Zuzana’s stuff:
