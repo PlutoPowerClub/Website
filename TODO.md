@@ -1,0 +1,2 @@
+- make full size on desktop
+- mobile friendly
