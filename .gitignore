@@ -36,3 +36,6 @@ coverage/
 # Ignore OS generated files
 ehthumbs.db
 Thumbs.db
+
+#keep ideas local
+planning+todo/ideas
