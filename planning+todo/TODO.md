@@ -1,10 +1,10 @@
 ## TODO:
 
 - Use JSON which is stored in Redux state.
-  - keep going through Redux essentials tutorial from here: [text](https://redux.js.org/tutorials/essentials/part-3-data-flow)
-  - NextJS Redux: [guide here](https://redux.js.org/usage/nextjs) and [here](https://blog.logrocket.com/use-redux-next-js/#creating-slice)
-  - Use [Redux persist](https://blog.logrocket.com/persist-state-redux-persist-redux-toolkit-react/) to persist values between sessions.
-- Connect solar api potential (at least stored json)
+  - Keep going through Redux essentials tutorial from here: [text](https://redux.js.org/tutorials/essentials/part-3-data-flow)
+  - then NextJS Redux: [guide here](https://redux.js.org/usage/nextjs) and [here](https://blog.logrocket.com/use-redux-next-js/#creating-slice)
+  - and use [Redux persist](https://blog.logrocket.com/persist-state-redux-persist-redux-toolkit-react/) to persist values between sessions.
+- Connect solar api potential (as stored json for now)
 - Use to change the value of community energy chart json (at this point this will be stored in state)
 - Work out how to integrate these python functions (see ts rewrite in ideas folder):
   - If you go to https://github.com/PlutoPowerClub/LibreGrid/blob/main/LibreGrid/core.py, these are the functions one could use to get data for the dashboard. More context is however in the notebook I used to write these, https://github.com/PlutoPowerClub/LibreGrid/blob/main/nbs/00_core.ipynb , there's an example workflow on how to set up the database. That might be nice for pulling data.
@@ -16,6 +16,8 @@
 
 ## (later) TODO:
 
+- see Audrey idea things for things could implement later.
+-
 - Edit map
   - add map controls like on brutalist map
   - some of buildings should be green on start on map - ones with solar.
