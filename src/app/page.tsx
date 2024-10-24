@@ -3,7 +3,7 @@ import Dynamic from "next/dynamic";
 const MainDashboard = Dynamic(() => import("@/components/Dashboard"), {
   ssr: false,
 });
-import DefaultLayout from "@/components/Layouts/DefaultLayout";
+import DefaultLayout from "@/app/DefaultLayout";
 
 export default function Home() {
   return (
