@@ -1,6 +1,7 @@
 ## TODO:
 
 - Use JSON which is stored in Redux state.
+  - keep going through Redux essentials tutorial from here: [text](https://redux.js.org/tutorials/essentials/part-3-data-flow)
   - NextJS Redux: [guide here](https://redux.js.org/usage/nextjs) and [here](https://blog.logrocket.com/use-redux-next-js/#creating-slice)
   - Use [Redux persist](https://blog.logrocket.com/persist-state-redux-persist-redux-toolkit-react/) to persist values between sessions.
 - Connect solar api potential (at least stored json)
