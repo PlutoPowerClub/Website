@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import ChartThree from "./Charts/HouseholdEnergy";
-import ChartFour from "./Charts/CommunityEnergy";
+import ChartThree from "../lib/features/householdEnergy/HouseholdEnergy";
+import ChartFour from "../lib/features/communityEnergy/CommunityEnergy";
 import WeatherForecast from "./WeatherForecast";
 import InviteNeighbours from "./Invite Neighbours";
 import Cash from "./Cash";

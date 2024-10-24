@@ -2,9 +2,12 @@
 import dynamic from "next/dynamic";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import Map from "@/components/Map";
-const ChartFour = dynamic(() => import("@/components/Charts/CommunityEnergy"), {
-  ssr: false,
-});
+const ChartFour = dynamic(
+  () => import("@/lib/features/communityEnergy/CommunityEnergy"),
+  {
+    ssr: false,
+  },
+);
 import CommunityBuild from "@/components/CommunityBuild";
 import CommunityShare from "@/components/CommunityShare";
 import { useState } from "react";
