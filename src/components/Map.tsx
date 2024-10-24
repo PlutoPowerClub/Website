@@ -17,7 +17,7 @@ const Map: React.FC = () => {
       container: "map",
       style: "https://tiles.openfreemap.org/styles/bright",
       center: [-1.2982167, 50.7029],
-      zoom: 18,
+      zoom: 16,
     });
 
     map.on("load", () => {
@@ -114,7 +114,7 @@ const Map: React.FC = () => {
           </div>
         </div>
       )}
-      <div id="map" style={{ height: "40rem", width: "80%" }} />
+      <div id="map" style={{ height: "50rem", width: "80%" }} />
     </>
   );
 };
