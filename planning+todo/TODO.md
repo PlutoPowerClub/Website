@@ -1,4 +1,4 @@
-- Convert charts to receive json and work with it. Might have to use redux or something to store values or react context.
+- Convert charts to receive json which is stored in Redux. Use Redux persist to persist databse between sessions.
 - Zuzana’s stuff:
   - connect solar api potential (at least stored json)
   - work out how to integrate these python functions within js. Might be easiest to just rewrite as js
