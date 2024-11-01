@@ -19,7 +19,13 @@ How to use this list:
 
 Top of dashboard should have explanation of the idea - tagline next to pluto explaining what it is. Like "Join 247 neighbors in saving energy & money" with Pluto! explain the project/why solar
 
-add metadata to pages with the default layout, page name etc. or on each one (as not many), like on the sign in page.
+- add metadata to pages:
+
+  - export const metadata: Metadata = {
+    title: "Dashboard",
+    description: "Welcome to Pluto",
+    };
+  - will have to be server components,if there's an issue then wrap the client components in server components (like a layout file for each one)
 
 - Use JSON which is stored in Redux state or store state in session (see session for login stuff below)
 

@@ -9,6 +9,8 @@ const CommunityEnergyChart = dynamic(
 );
 import CommunityBuild from "@/components/CommunityBuild";
 import CommunityShare from "@/components/CommunityShare";
+import { Metadata } from "next";
+
 export default function Home() {
   return (
     <>

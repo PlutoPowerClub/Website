@@ -8,14 +8,13 @@ import Link from "next/link";
 
 export default function RootLayout({
   children,
-  pageName,
 }: Readonly<{
   children: React.ReactNode;
   pageName: string;
 }>) {
   const [loading, setLoading] = useState<boolean>(true);
 
-  // const pathname = usePathname();
+  const pageName = document.title;
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
@@ -24,7 +23,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Pluto</title>
         <meta name="keywords" content="open source, energy, dashboard" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Pluto" />
