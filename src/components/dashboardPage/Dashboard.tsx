@@ -6,6 +6,7 @@ import CommunityEnergyChart from "../../lib/features/communityEnergy/CommunityEn
 import WeatherForecast from "./WeatherForecast";
 import CommunityImpact from "./CommunityImpact";
 import Cash from "./Cash";
+import Link from "next/link";
 
 const MainDashboard: React.FC = () => {
   const [communityGridEnergy, setCommunityGridEnergy] = useState(30);
@@ -17,6 +18,10 @@ const MainDashboard: React.FC = () => {
         <HouseholdEnergyChart />
         <CommunityEnergyChart />
         <Cash />
+      </div>
+      <div className="flex flex-row justify-start space-x-10 py-5 text-lg">
+        <Link href="/privacy-policy">Privacy Policy</Link>
+        <Link href="/stats">Stats for Nerds</Link>
       </div>
     </>
   );
