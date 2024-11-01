@@ -29,5 +29,11 @@
 - Fix deploy on cloudflare - plutopower.app not working currently.
 - Community page full height like dashboard screen
 - Styling
+
   - make full size on desktop
   - make mobile friendly, start with iphone se and work up.
+
+- Tips Page
+  - Could include:
+    - When to store energy (bar graph) (changes with more data)
+    - When to sell energy (bar graph) (changes with more data)
