@@ -26,7 +26,6 @@ add metadata to pages with the default layout, page name etc. or on each one (as
 ### Sign up page
 
 - mirror design of sign in page
--
 
 ### Main Dashboard
 
