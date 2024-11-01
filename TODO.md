@@ -3,6 +3,14 @@
 Go through and do easiest first (like finding links and putting in text)
 Go down list of stuff you need to learn how to do and prioritise those
 
+### Sign in page
+
+- Learn how to implement auth: [text](https://www.youtube.com/watch?v=U4hEflgix9c)
+- Better text on left hand side like "why to choose pluto"
+- User journey after that:
+  -How to join the individual households into an area (Persons A, B, and C have their own login with their own data and data on community A, Persons D, E, F have their own login and data and data on community B)
+  - sign out option
+
 ### General
 
 Top of dashboard should have explanation of the idea - tagline next to pluto explaining what it is. Like "Join 247 neighbors in saving energy & money" with Pluto! explain the project/why solar
@@ -27,21 +35,14 @@ add metadata to pages with the default layout, page name etc. or on each one (as
 
 - Usage - dummy data or phil’s meter, work on connecting up
 
-### Sign in page
-
-- Learn how to implement auth:
-- Better text on left hand side like "why to choose pluto"
-- User journey after that:
-  -How to join the individual households into an area (Persons A, B, and C have their own login with their own data and data on community A, Persons D, E, F have their own login and data and data on community B)
-  - sign out option
-
 ### Privacy Policy page
 
 - How to explain the collection of data
 
 ### Stats for Nerds page
 
-- How to have a suggestion form
+- Pad out data explanation
+- Add a suggestion form
 
 ### Sign up page
 
