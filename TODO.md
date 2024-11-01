@@ -16,6 +16,7 @@ Go down list of stuff you need to learn how to do and prioritise those
 ### Sign in page
 
 - learn how to implement auth
+- Better text on left hand side like "why to choose pluto"
 - user journey after that:
   -How to join the individual households into an area (Persons A, B, and C have their own login with their own data and data on community A, Persons D, E, F have their own login and data and data on community B)
 
