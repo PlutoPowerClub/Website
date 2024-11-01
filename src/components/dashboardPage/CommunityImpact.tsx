@@ -7,11 +7,7 @@ const CommunityImpact = () => {
       <h5 className="mb-7 flex items-center justify-between text-3xl font-semibold text-black dark:text-white">
         Increase Community Impact
       </h5>
-
       <div className="flex flex-row justify-between">
-        <p className="max-w-sm text-xl text-black">
-          Improve your Community's Energy Impact
-        </p>
         <Link href="/invites">
           <button className="text-bold mt-2 rounded-md bg-[#7cc45f] p-4 text-lg text-black transition duration-150 ease-in-out hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
             Add Solar Neighbours
@@ -19,7 +15,12 @@ const CommunityImpact = () => {
         </Link>
         <Link href="/tips">
           <button className="text-bold mt-2 rounded-md bg-[#7cc45f] p-4 text-lg text-black transition duration-150 ease-in-out hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-            Energy Tips
+            Energy Saving Tips
+          </button>
+        </Link>
+        <Link href="/tips">
+          <button className="text-bold mt-2 rounded-md bg-[#7cc45f] p-4 text-lg text-black transition duration-150 ease-in-out hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            Share this site
           </button>
         </Link>
       </div>

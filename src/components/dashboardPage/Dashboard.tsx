@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import HouseholdEnergyChart from "../lib/features/householdEnergy/HouseholdEnergy";
-import CommunityEnergyChart from "../lib/features/communityEnergy/CommunityEnergy";
+import HouseholdEnergyChart from "../../lib/features/householdEnergy/HouseholdEnergy";
+import CommunityEnergyChart from "../../lib/features/communityEnergy/CommunityEnergy";
 import WeatherForecast from "./WeatherForecast";
 import CommunityImpact from "./CommunityImpact";
 import Cash from "./Cash";
