@@ -4,11 +4,14 @@ import "flatpickr/dist/flatpickr.min.css";
 import "@/css/barlow.css";
 import "@/css/style.css";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function RootLayout({
   children,
+  pageName,
 }: Readonly<{
   children: React.ReactNode;
+  pageName: string;
 }>) {
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -73,7 +76,15 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>
-        <div>{children}</div>
+        <div className="relative w-full overflow-x-hidden px-10">
+          <div className="flex flex-row justify-between py-10 text-6xl font-bold text-black">
+            <Link href="/">
+              <h1>Pluto</h1>
+            </Link>
+            <h1>{pageName}</h1>
+          </div>
+          <main>{children}</main>
+        </div>
       </body>
     </html>
   );

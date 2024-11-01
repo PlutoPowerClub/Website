@@ -6,14 +6,11 @@ const MainDashboard = Dynamic(
     ssr: false,
   },
 );
-import DefaultLayout from "@/app/DefaultLayout";
 
-export default function Home() {
+export default function Home(pageName = "Dashboard") {
   return (
     <>
-      <DefaultLayout pageName="Dashboard">
-        <MainDashboard />
-      </DefaultLayout>
+      <MainDashboard />
     </>
   );
 }
