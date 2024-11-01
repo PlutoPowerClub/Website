@@ -1,15 +1,17 @@
-## TODO:
+# TODO:
 
-Go through and do easiest first (like finding links and putting in text)
-Go down list of stuff you need to learn how to do and prioritise those
+How to use this list:
+
+- Go through and do easiest first (like finding links and putting in text)
+- Go down list of stuff you need to learn how to do and prioritise those
 
 ### Sign in page
 
 - Learn how to implement auth: [text](https://www.youtube.com/watch?v=U4hEflgix9c)
-- Better text on left hand side like "why to choose pluto"
 - User journey after that:
   -How to join the individual households into an area (Persons A, B, and C have their own login with their own data and data on community A, Persons D, E, F have their own login and data and data on community B)
   - sign out option
+  - might be good to map this out
 
 ### General
 
