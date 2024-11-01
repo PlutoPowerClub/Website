@@ -10,6 +10,7 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             How we've calculated energy usage and price estimates
           </div>
+          <div>suggestion form or just email</div>
         </div>
       </DefaultLayout>
     </>
