@@ -1,5 +1,47 @@
 ## TODO:
 
+- Top of dashboard should have explanation of the idea - tagline next to pluto explaining what it is. Like "Join 247 neighbors in saving energy & money" with Pluto! .
+
+- Login page
+
+  - nextjs login example learn how to
+
+  user journey after that:
+  -How to join the individual households into an area (Persons A, B, and C have their own login with their own data and data on community A, Persons D, E, F have their own login and data and data on community B)
+
+- Dashboard
+
+  - think about whether to have energy generated from solar on there, or just in terms of use (e.g. percentage of use is solar)
+    -and whether to have energy sold or whether this is just abstracted
+
+- Community Cashback
+
+  - improve this so it has like a thermometer on its side thing for a goal, and then link to another page to vote and set what that goal is.
+  - Page:
+    Building A Solar Community
+
+    Choice of projects:
+
+    Solar panels for local school
+
+    Solar panels for my neighbour
+
+    Solar panel farm
+
+    Solar panels for a community project (community garden/food bank/playground)
+
+    Make your own solar project
+
+    Each project has a money goal (three options: A) a boilerplate estimate B) a tool to help estimate by the user inputting data C) the user can input their own estimate)
+
+    An estimate of goal completion time (changed as more data comes in)
+
+    You can vote on projects to complete as a community
+
+    Links to businesses that will build these projects on a discount (they buy into the scheme with Octopus)
+
+    Links to government website on solar grants
+
 - Use JSON which is stored in Redux state.
   - Keep going through Redux essentials tutorial from here: [text](https://redux.js.org/tutorials/essentials/part-3-data-flow)
   - then NextJS Redux: [guide here](https://redux.js.org/usage/nextjs) and [here](https://blog.logrocket.com/use-redux-next-js/#creating-slice)
@@ -16,8 +58,6 @@
 
 ## (later) TODO:
 
-- see Audrey idea things for things could implement later.
--
 - Edit map
   - add map controls like on brutalist map
   - some of buildings should be green on start on map - ones with solar.
