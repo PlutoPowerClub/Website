@@ -9,9 +9,27 @@ Top of dashboard should have explanation of the idea - tagline next to pluto exp
 
 add metadata to pages with the default layout, page name etc. or on each one (as not many), like on the sign in page.
 
+- Use JSON which is stored in Redux state or store state in session (see session for login stuff below)
+
+  - Keep going through Redux essentials tutorial from here: [text](https://redux.js.org/tutorials/essentials/part-3-data-flow)
+  - then NextJS Redux: [guide here](https://redux.js.org/usage/nextjs) and [here](https://blog.logrocket.com/use-redux-next-js/#creating-slice)
+  - and use [Redux persist](https://blog.logrocket.com/persist-state-redux-persist-redux-toolkit-react/) to persist values between sessions.
+
+- Connect solar api potential (as stored json for now)
+
+- Use to change the value of community energy chart json
+
+- Work out how to integrate these python functions:
+
+  - If you go to https://github.com/PlutoPowerClub/LibreGrid/blob/main/LibreGrid/core.py, these are the functions one could use to get data for the dashboard. More context is however in the notebook I used to write these, https://github.com/PlutoPowerClub/LibreGrid/blob/main/nbs/00_core.ipynb , there's an example workflow on how to set up the database. That might be nice for pulling data.
+  - Let me know what you think and what other functionalities I could add to the database so that it can support some of the plots
+  - I have to admit though... can't say all this stuff is very thoroughly tested... (dw about for now)
+
+- Usage - dummy data or phil’s meter, work on connecting up
+
 ### Sign in page
 
-- Learn how to implement auth
+- Learn how to implement auth:
 - Better text on left hand side like "why to choose pluto"
 - User journey after that:
   -How to join the individual households into an area (Persons A, B, and C have their own login with their own data and data on community A, Persons D, E, F have their own login and data and data on community B)
@@ -88,18 +106,6 @@ e.g. £10 earned from selling energy in 7 days. If £100 is needed for the proje
 
 g) Find links to local businesses (maybe fake ones for now)
 gi) Find links to government website on solar grants
-
-- Use JSON which is stored in Redux state.
-  - Keep going through Redux essentials tutorial from here: [text](https://redux.js.org/tutorials/essentials/part-3-data-flow)
-  - then NextJS Redux: [guide here](https://redux.js.org/usage/nextjs) and [here](https://blog.logrocket.com/use-redux-next-js/#creating-slice)
-  - and use [Redux persist](https://blog.logrocket.com/persist-state-redux-persist-redux-toolkit-react/) to persist values between sessions.
-- Connect solar api potential (as stored json for now)
-- Use to change the value of community energy chart json (at this point this will be stored in state)
-- Work out how to integrate these python functions (see ts rewrite in ideas folder):
-  - If you go to https://github.com/PlutoPowerClub/LibreGrid/blob/main/LibreGrid/core.py, these are the functions one could use to get data for the dashboard. More context is however in the notebook I used to write these, https://github.com/PlutoPowerClub/LibreGrid/blob/main/nbs/00_core.ipynb , there's an example workflow on how to set up the database. That might be nice for pulling data.
-  - Let me know what you think and what other functionalities I could add to the database so that it can support some of the plots
-  - I have to admit though... can't say all this stuff is very thoroughly tested... (dw about for now)
-- Usage - dummy data or phil’s meter, work on connecting up
 
 ### Tips Page
 
