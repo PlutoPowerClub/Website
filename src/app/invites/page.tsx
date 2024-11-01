@@ -1,6 +1,5 @@
 "use client";
 import dynamic from "next/dynamic";
-import DefaultLayout from "@/app/DefaultLayout";
 import Map from "@/components/Map";
 const CommunityEnergyChart = dynamic(
   () => import("@/lib/features/communityEnergy/CommunityEnergy"),

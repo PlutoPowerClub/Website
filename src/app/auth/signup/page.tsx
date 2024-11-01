@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { Metadata } from "next";
-import DefaultLayout from "@/app/DefaultLayout";
 
 export const metadata: Metadata = {
   title: "Next.js SignUp Page | TailAdmin - Next.js Dashboard Template",
