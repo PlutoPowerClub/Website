@@ -5,6 +5,8 @@ How to use this list:
 - Go through and do easiest first (like finding links and putting in text)
 - Go down list of stuff you need to learn how to do and prioritise those
 
+- see bits in Todoist list too
+
 ### Sign in page
 
 - Learn how to implement auth: [text](https://www.youtube.com/watch?v=U4hEflgix9c)
@@ -134,8 +136,9 @@ gi) Find links to government website on solar grants
 - Grab weather forecast from api endpoint.
 - Community cashback could be a slider, like gameshow thing, or like to total value
 - Fix deploy on cloudflare - plutopower.app not working currently.
-- Community page full height like dashboard screen
-- Styling
 
-  - make full size on desktop
-  - make mobile friendly, start with iphone se and work up.
+### Styling
+
+- less tailwind copied and more use css files, see the ones that are linked in layout.tsx
+- make full size on desktop
+- make mobile friendly, start with iphone se and work up.
