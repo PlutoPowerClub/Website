@@ -3,17 +3,11 @@
 Go through and do easiest first (like finding links and putting in text)
 Go down list of stuff you need to learn how to do and prioritise those
 
+### General
+
 Top of dashboard should have explanation of the idea - tagline next to pluto explaining what it is. Like "Join 247 neighbors in saving energy & money" with Pluto! explain the project/why solar
 
 add metadata to pages with the default layout, page name etc. or on each one (as not many), like on the sign in page.
-
-### Privacy Policy page
-
-- How to explain the collection of data
-
-### Stats for Nerds page
-
-- How to have a suggestion form
 
 ### Sign in page
 
@@ -22,6 +16,14 @@ add metadata to pages with the default layout, page name etc. or on each one (as
 - User journey after that:
   -How to join the individual households into an area (Persons A, B, and C have their own login with their own data and data on community A, Persons D, E, F have their own login and data and data on community B)
   - sign out option
+
+### Privacy Policy page
+
+- How to explain the collection of data
+
+### Stats for Nerds page
+
+- How to have a suggestion form
 
 ### Sign up page
 
@@ -99,6 +101,17 @@ gi) Find links to government website on solar grants
   - I have to admit though... can't say all this stuff is very thoroughly tested... (dw about for now)
 - Usage - dummy data or phil’s meter, work on connecting up
 
+### Tips Page
+
+- Fill out properly
+- Could include:
+  - When to store energy (bar graph) (changes with more data)
+    - Find data on best time to store energy (not a priority)
+    - How to display this on a bar graph
+  - When to sell energy (bar graph) (changes with more data)
+    - Find data on the best times to sell energy
+    - How to display this on a bar graph
+
 **N.B. to edit deployed site have to sync fork in jack repo**
 
 ## (later) TODO:
@@ -117,12 +130,3 @@ gi) Find links to government website on solar grants
 
   - make full size on desktop
   - make mobile friendly, start with iphone se and work up.
-
-- Tips Page
-  - Could include:
-    - When to store energy (bar graph) (changes with more data)
-      - Find data on best time to store energy (not a priority)
-      - How to display this on a bar graph
-    - When to sell energy (bar graph) (changes with more data)
-      - Find data on the best times to sell energy
-      - How to display this on a bar graph
