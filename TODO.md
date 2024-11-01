@@ -5,6 +5,8 @@ Go down list of stuff you need to learn how to do and prioritise those
 
 - Top of dashboard should have explanation of the idea - tagline next to pluto explaining what it is. Like "Join 247 neighbors in saving energy & money" with Pluto! explain the project/why solar
 
+- add metadata to pages with the default layout, page name etc. or on each one (as not many), like on the sign in page.
+
 ### Privacy Policy page
 
 - How to explain the collection of data
