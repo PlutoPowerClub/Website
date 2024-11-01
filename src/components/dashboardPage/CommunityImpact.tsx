@@ -9,7 +9,7 @@ const CommunityImpact = () => {
       </h5>
       <p className="mb-4 text-lg text-black lg:text-xl">
         Improve your community's enrgy impact by adding solar neighbours or
-        conserving power with our energy saving tips:
+        using less energy.
       </p>
       <div className="flex flex-row justify-start space-x-10">
         <Link href="/invites">
