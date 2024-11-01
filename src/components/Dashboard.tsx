@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import HouseholdEnergyChart from "../lib/features/householdEnergy/HouseholdEnergy";
 import CommunityEnergyChart from "../lib/features/communityEnergy/CommunityEnergy";
 import WeatherForecast from "./WeatherForecast";
-import InviteNeighbours from "./Invite Neighbours";
+import CommunityImpact from "./CommunityImpact";
 import Cash from "./Cash";
 
 const MainDashboard: React.FC = () => {
@@ -13,7 +13,7 @@ const MainDashboard: React.FC = () => {
     <>
       <div className="grid w-full grid-cols-10 gap-5">
         <WeatherForecast />
-        <InviteNeighbours />
+        <CommunityImpact />
         <HouseholdEnergyChart />
         <CommunityEnergyChart />
         <Cash />
