@@ -151,6 +151,8 @@ gi) Find links to government website on solar grants
 
 ### Other
 
+Fix pagenames using breadcrumbs - see what we used to have on it in the tailadmin template. Write page name next to "Pluto" in nav menu.
+
 If everyone had solar, take average sixe of roof, then you would all save this much money
 
 use existing code from wind club total energy use vs production etc.
@@ -176,8 +178,6 @@ use this structure:
 
 read this: [text](https://www.theatlantic.com/science/archive/2024/10/solar-power-energy-revolution-global-south/680351/)
 
-# Layout
+# Layout file
 
 fix favicon lines commented out
-
-fix pagenames using breadcrumbs - see what we used to have on it
