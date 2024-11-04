@@ -2,9 +2,6 @@ import Dynamic from "next/dynamic";
 import { getServerSession } from "next-auth";
 const MainDashboard = Dynamic(
   () => import("@/components/dashboardPage/Dashboard"),
-  {
-    ssr: false,
-  },
 );
 import { Metadata } from "next";
 export const metadata: Metadata = {
