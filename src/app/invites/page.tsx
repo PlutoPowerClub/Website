@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 import Map from "@/components/Map";
 const CommunityEnergyChart = dynamic(
-  () => import("@/lib/features/communityEnergy/CommunityEnergy"),
+  () => import("@/components/communityEnergy/CommunityEnergy"),
   {
     ssr: false,
   },

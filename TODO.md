@@ -5,8 +5,6 @@ How to use this list:
 - Go through and do easiest first (like finding links and putting in text)
 - Go down list of stuff you need to learn how to do and prioritise those
 
-- see bits in Todoist list too
-
 ### Sign in page
 
 - Learn how to implement auth: [text](https://www.youtube.com/watch?v=U4hEflgix9c)
