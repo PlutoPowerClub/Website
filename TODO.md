@@ -7,13 +7,11 @@ How to use this list:
 
 ### General
 
-### Other
+!Layout file - fix favicon lines commented out
 
 - work on i and p meeting notes in notion
 
 read this: [text](https://www.theatlantic.com/science/archive/2024/10/solar-power-energy-revolution-global-south/680351/)
-
-Layout file - fix favicon lines commented out
 
 Top of dashboard should have explanation of the idea - tagline next to pluto explaining what it is. Like "Join 247 neighbors in saving energy & money" with Pluto! explain the project/why solar
 
