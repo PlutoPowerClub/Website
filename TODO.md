@@ -9,10 +9,6 @@ How to use this list:
 
 ### Other
 
-use existing code from wind club total energy use vs production etc.
-
-having solar and how that money can go into community projects, eg. this much is needed to put solar on the school, on the hospital etc.
-
 - work on i and p meeting notes in notion
 
 read this: [text](https://www.theatlantic.com/science/archive/2024/10/solar-power-energy-revolution-global-south/680351/)
@@ -21,23 +17,13 @@ Layout file - fix favicon lines commented out
 
 Top of dashboard should have explanation of the idea - tagline next to pluto explaining what it is. Like "Join 247 neighbors in saving energy & money" with Pluto! explain the project/why solar
 
-- add metadata to pages:
-
-  - export const metadata: Metadata = {
-    title: "Dashboard",
-    description: "Welcome to Pluto",
-    };
-  - will have to be server components,if there's an issue then wrap the client components in server components (like a layout file for each one)
-
 - Use JSON which is stored in Redux state or store state in session (see session for login stuff below)
 
   - Keep going through Redux essentials tutorial from here: [text](https://redux.js.org/tutorials/essentials/part-3-data-flow)
   - then NextJS Redux: [guide here](https://redux.js.org/usage/nextjs) and [here](https://blog.logrocket.com/use-redux-next-js/#creating-slice)
   - and use [Redux persist](https://blog.logrocket.com/persist-state-redux-persist-redux-toolkit-react/) to persist values between sessions.
 
-- Connect solar api potential (as stored json for now)
-
-- Use to change the value of community energy chart json
+- Connect solar api potential (as stored json for now) and use to change the value of community energy chart json
 
 - Work out how to integrate these python functions:
 
@@ -89,6 +75,8 @@ Top of dashboard should have explanation of the idea - tagline next to pluto exp
   eiii) and then display it in a pie chart
 
 ### Community Cashback (component and build out page)
+
+having solar and how that money can go into community projects, eg. this much is needed to put solar on the school, on the hospital etc.
 
 If everyone had solar, take average size of roof, then you would all save this much money. Have this idea reflected on community map - that page should show what happens to community total when more of energy is solar etc. (ie not just this percentage of your community's energy is solar).
 
