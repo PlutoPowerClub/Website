@@ -1,25 +1,19 @@
-"use client";
 import "jsvectormap/dist/jsvectormap.css";
 import "flatpickr/dist/flatpickr.min.css";
 import "@/css/barlow.css";
 import "@/css/style.css";
-import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { getServerSession } from "next-auth";
+import SessionProvider from "../providers/SessionProvider";
+import NavMenu from "../components/NavMenu";
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
   pageName: string;
 }>) {
-  const [loading, setLoading] = useState<boolean>(true);
-
-  const pageName = document.title;
-
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
-  }, []);
-
+  const session = await getServerSession();
   return (
     <html lang="en">
       <head>
@@ -75,13 +69,12 @@ export default function RootLayout({
       </head>
       <body>
         <div className="relative w-full overflow-x-hidden px-10">
-          <div className="flex flex-row justify-between py-10 text-6xl font-bold text-black">
-            <Link href="/">
-              <h1>Pluto</h1>
-            </Link>
-            <h1>{pageName}</h1>
-          </div>
-          <main>{children}</main>
+          <SessionProvider session={session}>
+            <main>
+              <NavMenu />
+              {children}
+            </main>
+          </SessionProvider>
         </div>
       </body>
     </html>
