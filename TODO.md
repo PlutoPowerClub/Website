@@ -175,3 +175,9 @@ use this structure:
 /𝘂𝘁𝗶𝗹𝘀 --> Utility functions and helpers
 
 read this: [text](https://www.theatlantic.com/science/archive/2024/10/solar-power-energy-revolution-global-south/680351/)
+
+# Layout
+
+fix favicon lines commented out
+
+fix pagenames using breadcrumbs - see what we used to have on it
