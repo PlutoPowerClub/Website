@@ -9,9 +9,7 @@ How to use this list:
 
 - work on i and p meeting notes in notion
 
-read this: [text](https://www.theatlantic.com/science/archive/2024/10/solar-power-energy-revolution-global-south/680351/)
-
-Top of dashboard should have explanation of the idea - tagline next to pluto explaining what it is. Like "Join 247 neighbors in saving energy & money" with Pluto! explain the project/why solar
+- Top of dashboard should have explanation of the idea - tagline next to pluto explaining what it is. Like "Join 247 neighbors in saving energy & money" with Pluto! explain the project/why solar
 
 - Use JSON which is stored in Redux state or store state in session (see session for login stuff below)
 
@@ -47,7 +45,7 @@ Top of dashboard should have explanation of the idea - tagline next to pluto exp
 
 ### Stats for Nerds page
 
-- Pad out data explanation
+- data explanation
 - Add a suggestion form
 
 ### Sign up page
@@ -72,9 +70,9 @@ Top of dashboard should have explanation of the idea - tagline next to pluto exp
 
 ### Community Cashback (component and build out page)
 
-having solar and how that money can go into community projects, eg. this much is needed to put solar on the school, on the hospital etc.
+- having solar and how that money can go into community projects, eg. this much is needed to put solar on the school, on the hospital etc.
 
-If everyone had solar, take average size of roof, then you would all save this much money. Have this idea reflected on community map - that page should show what happens to community total when more of energy is solar etc. (ie not just this percentage of your community's energy is solar).
+- If everyone had solar, take average size of roof, then you would all save this much money. Have this idea reflected on community map - that page should show what happens to community total when more of energy is solar etc. (ie not just this percentage of your community's energy is solar).
 
 - improve this so it has like a thermometer on its side thing for a goal, and then link to another page to vote and set what that goal is. Donation goal, thermometer like thing like 10% of way to goal for community project
 - Page:
@@ -148,3 +146,4 @@ gi) Find links to government website on solar grants
 - less tailwind copied and more use css files, see the ones that are linked in layout.tsx
 - make full size on desktop
 - make mobile friendly, start with iphone se and work up.
+- check favicon working
