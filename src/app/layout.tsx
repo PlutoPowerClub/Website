@@ -2,7 +2,6 @@ import "jsvectormap/dist/jsvectormap.css";
 import "flatpickr/dist/flatpickr.min.css";
 import "@/css/barlow.css";
 import "@/css/style.css";
-import Link from "next/link";
 import { getServerSession } from "next-auth";
 import SessionProvider from "../providers/SessionProvider";
 import NavMenu from "../components/NavMenu";
@@ -21,25 +20,6 @@ export default async function RootLayout({
         <meta name="author" content="Pluto" />
         <meta name="description" content={"Open Source Energy Dashboard"} />
         <link rel="canonical" href="https://plutowebsite.vercel.app" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon/favicon.ico"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
         {/* Theme color */}
         <meta name="theme-color" content="#000" />
         <meta name="msapplication-TileColor" content="#000000" />
