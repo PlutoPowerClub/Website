@@ -1,3 +1,5 @@
+"use client";
+
 import { ApexOptions } from "apexcharts";
 import ReactApexChart from "react-apexcharts";
 

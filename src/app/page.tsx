@@ -7,7 +7,6 @@ const MainDashboard = Dynamic(
   },
 );
 import { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "Dashboard",
   description: "Welcome to Pluto",
@@ -15,6 +14,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const session = await getServerSession();
+
   return (
     <>
       {session?.user?.name ? (
@@ -22,7 +22,7 @@ export default async function Home() {
           Welcome {session?.user?.name}!
         </div>
       ) : (
-        <div>Not logged in</div>
+        <div></div>
       )}
       <MainDashboard />
     </>

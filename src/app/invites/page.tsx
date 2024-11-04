@@ -1,4 +1,3 @@
-"use client";
 import dynamic from "next/dynamic";
 import Map from "@/components/Map";
 const CommunityEnergyChart = dynamic(
@@ -9,6 +8,11 @@ const CommunityEnergyChart = dynamic(
 );
 import CommunityBuild from "@/components/CommunityBuild";
 import CommunityShare from "@/components/CommunityShare";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Build a Community",
+  description: "Map of possible solar energy",
+};
 
 export default function Home() {
   return (

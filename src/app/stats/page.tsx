@@ -1,4 +1,9 @@
 "use client";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Stats For Nerds",
+  description: "Jump into the nerdy details of our open source dashboard.",
+};
 
 export default function Home() {
   return (

@@ -11,7 +11,6 @@ export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-  pageName: string;
 }>) {
   const session = await getServerSession();
   return (

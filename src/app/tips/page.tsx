@@ -1,4 +1,8 @@
-"use client";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Energy Tips",
+  description: "Helpful energy tips to help you save energy.",
+};
 
 export default function Home() {
   return (

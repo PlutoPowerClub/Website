@@ -25,10 +25,9 @@ export default function NavMenu() {
   return (
     <div className="flex flex-row justify-between py-10 text-6xl font-bold text-black">
       <Link href="/">
-        <h1>Pluto</h1>
+        <h1>Pluto </h1>
       </Link>
       <AuthButton />
-      {/* <h1>{pageName}</h1> */}
     </div>
   );
 }

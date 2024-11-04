@@ -7,6 +7,20 @@ How to use this list:
 
 ### General
 
+### Other
+
+If everyone had solar, take average sixe of roof, then you would all save this much money
+
+use existing code from wind club total energy use vs production etc.
+
+having solar and how that money can go into community projects, eg. this much is needed to put solar on the school, on the hospital etc.
+
+- work on i and p meeting notes in notion
+
+read this: [text](https://www.theatlantic.com/science/archive/2024/10/solar-power-energy-revolution-global-south/680351/)
+
+Layout file - fix favicon lines commented out
+
 Top of dashboard should have explanation of the idea - tagline next to pluto explaining what it is. Like "Join 247 neighbors in saving energy & money" with Pluto! explain the project/why solar
 
 - add metadata to pages:
@@ -150,36 +164,3 @@ gi) Find links to government website on solar grants
 - less tailwind copied and more use css files, see the ones that are linked in layout.tsx
 - make full size on desktop
 - make mobile friendly, start with iphone se and work up.
-
-### Other
-
-Fix pagenames using breadcrumbs - see what we used to have on it in the tailadmin template. Write page name next to "Pluto" in nav menu.
-
-If everyone had solar, take average sixe of roof, then you would all save this much money
-
-use existing code from wind club total energy use vs production etc.
-
-having solar and how that money can go into community projects, eg. this much is needed to put solar on the school, on the hospital etc.
-
-- work on i and p meeting notes in notion
-
-use this structure:
-/𝘀𝗿𝗰
-/𝗮𝘀𝘀𝗲𝘁𝘀 --> Images, fonts, and other static files
-/𝗰𝗼𝗺𝗽𝗼𝗻𝗲𝗻𝘁𝘀 --> Reusable components
-/𝗰𝗼𝗻𝘁𝗲𝘅𝘁 --> Context API or Redux logic
-/𝗱𝗮𝘁𝗮 --> Static data or data models that might be used in the app.
-/𝗳𝗲𝗮𝘁𝘂𝗿𝗲𝘀 --> Feature-specific modules.
-/𝗽𝗮𝗴𝗲𝘀 --> Page-level components
-/𝗵𝗼𝗼𝗸𝘀 --> Custom React hooks
-/𝗹𝗮𝘆𝗼𝘂𝘁𝘀 --> App structure components (header, footer).
-/𝗹𝗶𝗯 --> External libraries and utilities.
-/𝘀𝗲𝗿𝘃𝗶𝗰𝗲𝘀 --> API calls and external services
-/𝘀𝘁𝘆𝗹𝗲𝘀 --> Global and component-specific styles
-/𝘂𝘁𝗶𝗹𝘀 --> Utility functions and helpers
-
-read this: [text](https://www.theatlantic.com/science/archive/2024/10/solar-power-energy-revolution-global-south/680351/)
-
-# Layout file
-
-fix favicon lines commented out
