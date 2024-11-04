@@ -9,8 +9,6 @@ How to use this list:
 
 ### Other
 
-If everyone had solar, take average sixe of roof, then you would all save this much money
-
 use existing code from wind club total energy use vs production etc.
 
 having solar and how that money can go into community projects, eg. this much is needed to put solar on the school, on the hospital etc.
@@ -91,6 +89,8 @@ Top of dashboard should have explanation of the idea - tagline next to pluto exp
   eiii) and then display it in a pie chart
 
 ### Community Cashback (component and build out page)
+
+If everyone had solar, take average size of roof, then you would all save this much money. Have this idea reflected on community map - that page should show what happens to community total when more of energy is solar etc. (ie not just this percentage of your community's energy is solar).
 
 - improve this so it has like a thermometer on its side thing for a goal, and then link to another page to vote and set what that goal is. Donation goal, thermometer like thing like 10% of way to goal for community project
 - Page:
