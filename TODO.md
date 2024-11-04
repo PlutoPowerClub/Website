@@ -5,14 +5,6 @@ How to use this list:
 - Go through and do easiest first (like finding links and putting in text)
 - Go down list of stuff you need to learn how to do and prioritise those
 
-### Sign in page
-
-- Learn how to implement auth: [text](https://www.youtube.com/watch?v=U4hEflgix9c)
-- User journey after that:
-  -How to join the individual households into an area (Persons A, B, and C have their own login with their own data and data on community A, Persons D, E, F have their own login and data and data on community B)
-  - sign out option
-  - might be good to map this out
-
 ### General
 
 Top of dashboard should have explanation of the idea - tagline next to pluto explaining what it is. Like "Join 247 neighbors in saving energy & money" with Pluto! explain the project/why solar
@@ -44,6 +36,16 @@ Top of dashboard should have explanation of the idea - tagline next to pluto exp
   [python serverless functions](https://www.reddit.com/r/nextjs/comments/1brms6j/python_serverless_function_with_next_js/)
 
 - Usage - dummy data or phil’s meter, work on connecting up
+
+### Sign in page
+
+- Finish implementing auth
+  - Connect to proper sign in page instead of cognito callback page (maybe write test values for people to be able to view)
+  - protected routes (like in protected/page.tsx)
+  - protected API routes if need them from 14.19 in [here](https://www.youtube.com/watch?v=md65iBX5Gxg&t=381s)
+- User journey after that:
+  -How to join the individual households into an area (Persons A, B, and C have their own login with their own data and data on community A, Persons D, E, F have their own login and data and data on community B)
+  - might be good to map this out
 
 ### Privacy Policy page
 

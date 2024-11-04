@@ -1,4 +1,5 @@
 import Dynamic from "next/dynamic";
+import { getServerSession } from "next-auth";
 const MainDashboard = Dynamic(
   () => import("@/components/dashboardPage/Dashboard"),
   {
@@ -12,9 +13,17 @@ export const metadata: Metadata = {
   description: "Welcome to Pluto",
 };
 
-export default function Home(pageName = "Dashboard") {
+export default async function Home() {
+  const session = await getServerSession();
   return (
     <>
+      {session?.user?.name ? (
+        <div className="pb-4 text-3xl font-bold text-black">
+          Welcome {session?.user?.name}!
+        </div>
+      ) : (
+        <div>Not logged in</div>
+      )}
       <MainDashboard />
     </>
   );
