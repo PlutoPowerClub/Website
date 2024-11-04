@@ -7,8 +7,6 @@ How to use this list:
 
 ### General
 
-!Layout file - fix favicon lines commented out
-
 - work on i and p meeting notes in notion
 
 read this: [text](https://www.theatlantic.com/science/archive/2024/10/solar-power-energy-revolution-global-south/680351/)
@@ -133,7 +131,7 @@ gi) Find links to government website on solar grants
 
 **N.B. to edit deployed site have to sync fork in jack repo**
 
-## (later) TODO:
+# (later) TODO:
 
 - Edit map
   - add map controls like on brutalist map
