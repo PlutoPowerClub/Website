@@ -138,7 +138,6 @@ gi) Find links to government website on solar grants
   - use next js server action when update data with click on map ([see here](https://www.youtube.com/watch?v=O94ESaJtHtM))
 - Grab weather forecast from api endpoint.
 - Community cashback could be a slider, like gameshow thing, or like to total value
-- Fix deploy on cloudflare - plutopower.app not working currently.
 
 ### Styling
 
