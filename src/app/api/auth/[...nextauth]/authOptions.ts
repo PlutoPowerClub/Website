@@ -10,5 +10,8 @@ export const authOptions = {
       checks: "nonce",
     }),
   ],
+  pages: {
+    signIn: "/auth/signin",
+  },
   debug: true,
 };
