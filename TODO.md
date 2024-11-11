@@ -31,6 +31,7 @@ How to use this list:
 
 ### Sign in page
 
+- Better image on left of sign in page
 - Finish implementing auth
   - add any more protected routes that are needed (like in protected/page.tsx)
   - protected API routes if need them from 14.19 in [here](https://www.youtube.com/watch?v=md65iBX5Gxg&t=381s)
@@ -45,16 +46,16 @@ How to use this list:
 
 ### Stats for Nerds page
 
-- data explanation
-- Add a suggestion form
+- Data explanation
+- Add a suggestion form which feeds into airtable or something.
 
 ### Sign up page
 
-- mirror design of sign in page
+- Mirror design of sign in page
 
 ### Main Dashboard
 
-- think about whether to have energy generated from solar on there, or just in terms of use (e.g. percentage of use is solar)
+- Think about whether to have energy generated from solar on there, or just in terms of use (e.g. percentage of use is solar)
   -and whether to have energy sold or whether this is just abstracted
 
 - Steps:
@@ -127,9 +128,7 @@ gi) Find links to government website on solar grants
     - Find data on the best times to sell energy
     - How to display this on a bar graph
 
-**N.B. to edit deployed site have to sync fork in jack repo**
-
-# (later) TODO:
+### Map Page
 
 - Edit map
   - add map controls like on brutalist map
@@ -147,3 +146,5 @@ gi) Find links to government website on solar grants
 - make full size on desktop
 - make mobile friendly, start with iphone se and work up.
 - check favicon working
+
+**N.B. to edit deployed site have to sync fork in jack repo**
