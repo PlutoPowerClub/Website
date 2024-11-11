@@ -1,7 +1,6 @@
 "use client";
 import { FormEvent } from "react";
 import { signIn } from "next-auth/react";
-import Link from "next/link";
 
 export default function Form(): JSX.Element {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -41,15 +40,6 @@ export default function Form(): JSX.Element {
       >
         Sign In
       </button>
-
-      <div className="text-center">
-        <p>
-          Don't have an account?{" "}
-          <Link href="/auth/signup" className="text-primary">
-            Sign Up
-          </Link>
-        </p>
-      </div>
     </form>
   );
 }

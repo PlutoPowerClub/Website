@@ -32,9 +32,9 @@ How to use this list:
 ### Sign in page
 
 - Finish implementing auth
-  - Connect to proper sign in page instead of cognito callback page (maybe write test values for people to be able to view)
-  - protected routes (like in protected/page.tsx)
+  - add any more protected routes that are needed (like in protected/page.tsx)
   - protected API routes if need them from 14.19 in [here](https://www.youtube.com/watch?v=md65iBX5Gxg&t=381s)
+  - sign up page links to cognito too.
 - User journey after that:
   -How to join the individual households into an area (Persons A, B, and C have their own login with their own data and data on community A, Persons D, E, F have their own login and data and data on community B)
   - might be good to map this out

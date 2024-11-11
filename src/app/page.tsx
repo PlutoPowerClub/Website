@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import Dynamic from "next/dynamic";
 import { getServerSession } from "next-auth";
 const MainDashboard = Dynamic(
@@ -11,7 +12,9 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const session = await getServerSession();
-
+  if (!session || !session.user) {
+    redirect("/api/auth/signin");
+  }
   return (
     <>
       {session?.user?.name ? (
