@@ -1,21 +1,6 @@
 # TODO:
 
-How to use this list:
-
-- Go through and do easiest first (like finding links and putting in text)
-- Go down list of stuff you need to learn how to do and prioritise those
-
 ### General
-
-- work on i and p meeting notes in notion
-
-- Top of dashboard should have explanation of the idea - tagline next to pluto explaining what it is. Like "Join 247 neighbors in saving energy & money" with Pluto! explain the project/why solar
-
-- Use JSON which is stored in Redux state or store state in session (see session for login stuff below)
-
-  - Keep going through Redux essentials tutorial from here: [text](https://redux.js.org/tutorials/essentials/part-3-data-flow)
-  - then NextJS Redux: [guide here](https://redux.js.org/usage/nextjs) and [here](https://blog.logrocket.com/use-redux-next-js/#creating-slice)
-  - and use [Redux persist](https://blog.logrocket.com/persist-state-redux-persist-redux-toolkit-react/) to persist values between sessions.
 
 - Connect solar api potential (as stored json for now) and use to change the value of community energy chart json
 
