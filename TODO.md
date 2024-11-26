@@ -1,5 +1,7 @@
 # TODO:
 
+- Fix aws cognito hosted login screen issue - with aws amplify probably easiest
+
 ### General
 
 - Connect solar api potential (as stored json for now) and use to change the value of community energy chart json
