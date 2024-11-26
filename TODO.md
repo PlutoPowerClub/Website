@@ -8,6 +8,7 @@
 - improve design
 - make full size on desktop
 - Better image on left of sign in page
+- animations - framer loading animations like on vital signs
 
 - once improved, ask for feedback from someone in Octopus (through Phil).
 
