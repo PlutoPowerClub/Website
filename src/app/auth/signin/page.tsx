@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Form from "./form";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Sign In | StarFishEnergy",
@@ -13,7 +12,7 @@ const SignIn: React.FC = () => {
     <div className="flex items-center justify-center text-neutral-800">
       <div className="bg-red-50 xl:bg w-full rounded-2xl border border-stroke shadow-lg">
         <div className="flex items-center justify-center sm:py-5 xl:justify-start xl:px-5">
-          <div className="w-full p-6 py-5 sm:p-8 md:max-w-xl">
+          <div className="w-full p-6 py-5 md:max-w-xl xl:p-8">
             <p className="mb-5 text-2xl font-medium sm:mb-12 sm:text-5xl">
               Sign in to visit Pluto.
             </p>
@@ -40,14 +39,15 @@ const SignIn: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="min-h-[800px] overflow-hidden">
+
+          <div className="relative flex h-full min-h-[800px] items-center overflow-hidden rounded-3xl p-6">
             <Image
               src="/images/surface.png"
               alt="Surface of Pluto. The photo has had a duotone filter of indigo and red applied."
               height={800}
               width={1200}
-              className="rounded-2xl object-cover p-10"
-            ></Image>
+              className="rounded-2xl object-cover"
+            />
           </div>
         </div>
       </div>
