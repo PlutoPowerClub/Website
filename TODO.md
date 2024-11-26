@@ -1,6 +1,12 @@
 # TODO:
 
-- Fix aws cognito hosted login screen issue - with aws amplify probably easiest
+### Styling
+
+- improve design
+- less tailwind copied and more use css files, see the ones that are linked in layout.tsx
+- make full size on desktop
+- make mobile friendly, start with iphone se and work up.
+- check favicon working
 
 ### General
 
@@ -19,10 +25,7 @@
 ### Sign in page
 
 - Better image on left of sign in page
-- Finish implementing auth
-  - add any more protected routes that are needed (like in protected/page.tsx)
-  - protected API routes if need them from 14.19 in [here](https://www.youtube.com/watch?v=md65iBX5Gxg&t=381s)
-  - sign up page links to cognito too.
+- If time, work out how to set up custom sign in page for AWS Cognito with NextAuth - using AWS Amplify and amazon-cognito-identity-js. This is a backend thing so not super important.
 - User journey after that:
   -How to join the individual households into an area (Persons A, B, and C have their own login with their own data and data on community A, Persons D, E, F have their own login and data and data on community B)
   - might be good to map this out
@@ -125,12 +128,5 @@ gi) Find links to government website on solar grants
   - use next js server action when update data with click on map ([see here](https://www.youtube.com/watch?v=O94ESaJtHtM))
 - Grab weather forecast from api endpoint.
 - Community cashback could be a slider, like gameshow thing, or like to total value
-
-### Styling
-
-- less tailwind copied and more use css files, see the ones that are linked in layout.tsx
-- make full size on desktop
-- make mobile friendly, start with iphone se and work up.
-- check favicon working
 
 **N.B. to edit deployed site have to sync fork in jack repo**
