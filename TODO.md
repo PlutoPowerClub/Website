@@ -1,15 +1,17 @@
 # TODO:
 
-### Styling
+## Frontend
+
+### Improve Design
 
 - make mobile friendly, start with iphone se and work up.
-
 - improve design
 - make full size on desktop
+- Better image on left of sign in page
 
-- check favicon working
+## Backend
 
-### General
+### Data
 
 - Connect solar api potential (as stored json for now) and use to change the value of community energy chart json
 
@@ -25,7 +27,6 @@
 
 ### Sign in page
 
-- Better image on left of sign in page
 - If time, work out how to set up custom sign in page for AWS Cognito with NextAuth - using AWS Amplify and amazon-cognito-identity-js. This is a backend thing so not super important.
 - User journey after that:
   -How to join the individual households into an area (Persons A, B, and C have their own login with their own data and data on community A, Persons D, E, F have their own login and data and data on community B)
