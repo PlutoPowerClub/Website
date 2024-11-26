@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const SignIn: React.FC = () => {
   return (
     <div className="flex items-center justify-center text-neutral-800">
-      <div className="bg-red-50 xl:bg w-full rounded-2xl border border-stroke shadow-lg">
+      <div className="xl:bg border-stroke w-full rounded-2xl border bg-red-50 shadow-lg">
         <div className="flex items-center justify-center sm:py-5 xl:justify-start xl:px-5">
           <div className="w-full p-6 py-5 md:max-w-xl xl:p-8">
             <p className="mb-5 text-2xl font-medium sm:mb-12 sm:text-5xl">
@@ -43,10 +43,10 @@ const SignIn: React.FC = () => {
           <div className="hidden h-full min-h-[800px] items-center overflow-hidden rounded-3xl p-6 xl:flex">
             <Image
               src="/images/surface.png"
-              alt="Surface of Pluto. The photo has had a duotone filter of indigo and red applied."
+              alt="Surface of Pluto."
               height={800}
               width={1200}
-              className="rounded-2xl object-cover"
+              className="rounded-2xl object-cover grayscale"
             />
           </div>
         </div>
