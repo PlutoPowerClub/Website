@@ -40,7 +40,7 @@ const SignIn: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative flex h-full min-h-[800px] items-center overflow-hidden rounded-3xl p-6">
+          <div className="hidden h-full min-h-[800px] items-center overflow-hidden rounded-3xl p-6 xl:flex">
             <Image
               src="/images/surface.png"
               alt="Surface of Pluto. The photo has had a duotone filter of indigo and red applied."
