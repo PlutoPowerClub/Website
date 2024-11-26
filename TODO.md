@@ -11,6 +11,12 @@
 
 - once improved, ask for feedback from someone in Octopus (through Phil).
 
+Defaults:
+
+- text-neutral-800 instead of black
+- indigo -100 bg, or red-50 or red-100
+- neutral-50 instead of white
+
 ## Backend
 
 ### Data

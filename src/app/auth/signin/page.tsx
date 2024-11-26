@@ -10,68 +10,46 @@ export const metadata: Metadata = {
 
 const SignIn: React.FC = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <div className="w-full rounded-2xl border border-stroke bg-white shadow-lg">
-        <div className="flex flex-wrap items-center">
+    <div className="flex items-center justify-center text-neutral-800">
+      <div className="bg-red-50 w-full rounded-2xl border border-stroke shadow-lg">
+        <div className="flex-start flex items-center">
           <div className="hidden w-full xl:block xl:w-1/2">
-            <div className="relative h-full p-10">
+            <div className="p-4">
               <Image
                 src="/images/surface.jpg"
-                alt="Image of the surface of the planet Pluto"
                 width={800}
-                height={1000}
-                className="rounded-2xl object-cover shadow-xl"
-                priority
-              />
-              <div className="absolute bottom-12 left-12 max-w-sm rounded-xl bg-white/90 p-6 backdrop-blur">
-                <h2 className="mb-2 text-2xl font-bold text-black">
-                  Join Pluto's Community Energy Network
-                </h2>
-                <p className="text-body">
-                  Monitor and manage your household energy consumption while
-                  contributing to a sustainable future.
-                </p>
-              </div>
+                height={400}
+                alt="the surface of the planet Pluto"
+                className="h-1/2 rounded-xl object-scale-down p-8"
+              ></Image>
             </div>
           </div>
 
           <div className="w-full xl:w-1/2">
-            <div className="p-8 sm:p-12.5 xl:p-17.5">
-              <div className="mb-10">
-                <h1 className="mb-3 text-3xl font-bold text-black">
-                  Welcome to Pluto
-                </h1>
-                <p className="text-body">
-                  Sign in to continue to your dashboard
-                </p>
-              </div>
-
+            <div className="p-6 sm:p-8">
+              <p className="mb-5 max-w-md text-2xl font-medium sm:mb-8 sm:text-4xl">
+                Sign in to visit Pluto.
+              </p>
               <Form />
-
-              <div className="mt-12 rounded-xl bg-gray-2 p-6">
-                <h2 className="mb-4 text-lg font-semibold text-black">
+              <div className="mt-4 rounded-xl bg-neutral-50 p-4 sm:mt-8">
+                <h2 className="mb-1 text-xl font-semibold text-neutral-800 sm:text-2xl">
                   Demo Account
                 </h2>
                 <div className="space-y-2">
-                  <p className="text-body">
-                    Email:{" "}
-                    <span className="font-medium text-black">
+                  <p className="text-body sm:text-xl">
+                    Email:
+                    <br />
+                    <span className="font-medium text-neutral-800">
                       jackkershaw@protonmail.com
                     </span>
                   </p>
-                  <p className="text-body">
-                    Password:{" "}
-                    <span className="font-medium text-black">Test1!Test1!</span>
+                  <p className="text-body sm:text-xl">
+                    Password:
+                    <br />
+                    <span className="font-medium text-neutral-800">
+                      Test1!Test1!
+                    </span>
                   </p>
-                </div>
-                <div className="mt-4 text-sm text-body">
-                  New user?{" "}
-                  <Link
-                    href="/auth/signup"
-                    className="font-medium text-primary hover:underline"
-                  >
-                    Create an account
-                  </Link>
                 </div>
               </div>
             </div>

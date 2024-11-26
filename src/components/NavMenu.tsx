@@ -8,14 +8,19 @@ function AuthButton() {
   if (session) {
     return (
       <>
-        <button onClick={() => signOut()}> Sign out</button>
+        <button className="text-xl sm:text-2xl" onClick={() => signOut()}>
+          {" "}
+          Sign out
+        </button>
       </>
     );
   }
   return (
     <>
       <>
-        <button onClick={() => signIn()}>Sign in</button>
+        <button className="text-xl sm:text-2xl" onClick={() => signIn()}>
+          Sign in
+        </button>
       </>
     </>
   );
@@ -23,9 +28,9 @@ function AuthButton() {
 
 export default function NavMenu() {
   return (
-    <div className="flex flex-row justify-between py-10 text-3xl font-bold text-black sm:text-6xl">
+    <div className="flex flex-row justify-between bg-indigo-100 py-5 font-bold text-neutral-800 sm:py-10">
       <Link href="/">
-        <h1>Pluto </h1>
+        <h1 className="text-3xl sm:text-4xl">Pluto </h1>
       </Link>
       <AuthButton />
     </div>

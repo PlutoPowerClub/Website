@@ -14,29 +14,29 @@ export default function Form(): JSX.Element {
     });
   };
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-4 text-neutral-800">
       <div className="flex flex-col justify-start">
-        <label className="pb-4 text-3xl font-bold text-black">Email</label>
+        <label className="pb-2 text-xl font-bold sm:text-2xl ">Email</label>
         <input
           name="email"
           type="email"
           placeholder=""
-          className="w-full rounded-lg border border-stroke bg-transparent p-4 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+          className="w-full rounded-lg border border-stroke bg-neutral-50 p-4"
         />
       </div>
       <div className="flex flex-col justify-start">
-        <label className="pb-4 text-3xl font-bold text-black">Password</label>
+        <label className="pb-2 text-xl font-bold sm:text-2xl ">Password</label>
         <input
           name="password"
           type="password"
           placeholder=""
-          className="w-full rounded-lg border border-stroke bg-transparent p-4 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+          className="w-full rounded-lg border border-stroke bg-neutral-50 p-4"
         />
       </div>
 
       <button
         type="submit"
-        className="w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 text-white transition hover:bg-opacity-90"
+        className="bg-red-500 hover:bg-red-400 w-full rounded-lg border border-stroke p-4 text-xl font-bold text-neutral-50 sm:text-2xl "
       >
         Sign In
       </button>
