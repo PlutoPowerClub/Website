@@ -2,10 +2,11 @@
 
 ### Styling
 
-- improve design
-- less tailwind copied and more use css files, see the ones that are linked in layout.tsx
-- make full size on desktop
 - make mobile friendly, start with iphone se and work up.
+
+- improve design
+- make full size on desktop
+
 - check favicon working
 
 ### General

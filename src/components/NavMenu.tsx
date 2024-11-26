@@ -23,7 +23,7 @@ function AuthButton() {
 
 export default function NavMenu() {
   return (
-    <div className="flex flex-row justify-between py-10 text-6xl font-bold text-black">
+    <div className="flex flex-row justify-between py-10 text-3xl font-bold text-black sm:text-6xl">
       <Link href="/">
         <h1>Pluto </h1>
       </Link>

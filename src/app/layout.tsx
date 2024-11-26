@@ -1,6 +1,3 @@
-import "jsvectormap/dist/jsvectormap.css";
-import "flatpickr/dist/flatpickr.min.css";
-import "@/css/barlow.css";
 import "@/css/style.css";
 import { getServerSession } from "next-auth";
 import SessionProvider from "../providers/SessionProvider";

@@ -62,10 +62,10 @@ const HouseholdEnergyChart: React.FC = () => {
   ];
 
   return (
-    <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
+    <div className="border-stroked col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default sm:px-7.5 xl:col-span-5">
       <div className="mb-4 justify-between gap-4 sm:flex">
         <div>
-          <h5 className="flex items-center justify-between text-3xl font-semibold text-black dark:text-white">
+          <h5 className="flex items-center justify-between text-3xl font-semibold text-black ">
             Your Household Energy
           </h5>
         </div>
@@ -80,7 +80,7 @@ const HouseholdEnergyChart: React.FC = () => {
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#63c64f]"></span>
-            <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
+            <p className="flex w-full justify-between text-sm font-medium text-black ">
               <span> Community </span>
               <span> {householdCommunityEnergy}% </span>
             </p>
@@ -89,7 +89,7 @@ const HouseholdEnergyChart: React.FC = () => {
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#ae493f] "></span>
-            <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
+            <p className="flex w-full justify-between text-sm font-medium text-black ">
               <span> Grid </span>
               <span> {householdGridEnergy}% </span>
             </p>
@@ -98,7 +98,7 @@ const HouseholdEnergyChart: React.FC = () => {
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#d7a21c]"></span>
-            <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
+            <p className="flex w-full justify-between text-sm font-medium text-black ">
               <span> Individual </span>
               <span> {householdIndividualEnergy}% </span>
             </p>
