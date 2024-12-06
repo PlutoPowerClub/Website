@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const CommunityBuild = () => {
   return (
-    <div className=" mt-0 rounded-sm border border-stroke bg-white bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 ">
+    <div className=" border-stroke pt-7.5 shadow-default sm:px-7.5 mt-0 rounded-sm border bg-white bg-white px-5 pb-5 ">
       <h1 className="mb-4 text-3xl font-bold text-black">Share</h1>
       <div className="flex flex-row justify-normal gap-10">
         <p className="text-xl text-black">Share these results:</p>

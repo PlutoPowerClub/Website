@@ -59,7 +59,7 @@ const CommunityEnergyChart = () => {
     <ComponentLayout>
       <div className="mb-3 justify-between gap-4 sm:flex">
         <div>
-          <h5 className="flex items-center justify-between text-3xl font-semibold text-black ">
+          <h5 className="flex items-center justify-between text-3xl font-semibold text-black">
             Your Community's Energy
           </h5>
         </div>
