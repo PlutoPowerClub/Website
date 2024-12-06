@@ -12,9 +12,9 @@ const SignIn: React.FC = () => {
     <div className="flex items-center justify-center text-neutral-800">
       <div className="border-stroke w-full rounded-2xl border bg-red-50 shadow-lg">
         <div className="flex ">
-          <div className="w-full flex-col justify-center lg:w-1/2 lg:px-10 lg:py-10">
+          <div className="w-full flex-col justify-center lg:w-1/2 lg:justify-between lg:p-2">
             <div className="w-full p-6 py-5 lg:max-w-xl">
-              <p className="mb-4 text-2xl font-bold tracking-tight sm:mb-10 sm:text-5xl xl:text-6xl">
+              <p className="mb-4 text-2xl font-bold tracking-tight sm:mb-8 sm:text-5xl xl:text-6xl">
                 Sign in to visit Pluto.
               </p>
               <Form />
@@ -42,7 +42,7 @@ const SignIn: React.FC = () => {
             </div>
           </div>
           <div className="hidden lg:block lg:w-1/2">
-            <div className="relative h-full  w-full">
+            <div className="relative h-full w-full">
               <Image
                 src="/images/surface.png"
                 alt="Surface of Pluto."
