@@ -5,7 +5,6 @@
 ### Improve Design
 
 - make mobile friendly, start with iphone se and work up.
-- Add Tailwind Forms, Typography and Container Queries
 - once improved, ask for feedback from someone in Octopus (through Phil).
 
 Defaults:
