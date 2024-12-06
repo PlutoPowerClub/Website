@@ -87,7 +87,7 @@ const Map: React.FC = () => {
   return (
     <>
       {calculatingSolar && (
-        <div className="popup absolute left-0 z-40 flex h-[100%] w-[100%] justify-center bg-white p-10">
+        <div className="popup absolute left-0 z-40 flex h-[100%] w-[100%] justify-center bg-neutral-50 p-10">
           <div className="text-center">
             <p className="py-10 text-4xl font-bold text-black">
               <svg
