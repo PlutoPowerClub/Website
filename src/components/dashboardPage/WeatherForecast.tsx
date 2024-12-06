@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 
 interface HourlyForecast {
@@ -15,9 +17,6 @@ interface ForecastData {
     weather_description: string;
   };
 }
-
-const endPoint =
-  "https://zuzanakovacsova--starfish-behaviour.modal.run/?latitude=51.514216&longitude=-0.137538";
 
 const dummyForecastData: ForecastData = {
   current: {
@@ -49,7 +48,7 @@ const WeatherForecast: React.FC = () => {
   }, []);
 
   return (
-    <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default sm:px-7.5 xl:col-span-5">
+    <div className="border-stroke pt-7.5 shadow-default sm:px-7.5 col-span-12 rounded-sm border bg-white px-5 pb-5 xl:col-span-5">
       {forecastData && forecastData.current ? (
         <div>
           <div className="mb-4 flex justify-between">
@@ -62,7 +61,7 @@ const WeatherForecast: React.FC = () => {
               <p className="text-lg font-medium text-black ">
                 {forecastData.current.temperature_2m}°C
               </p>
-              <p className="text-gray-600 text-sm">
+              <p className="text-sm text-gray-600">
                 {forecastData.current.weather_description}
               </p>
             </div>
