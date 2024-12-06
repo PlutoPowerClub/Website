@@ -5,7 +5,7 @@ import ComponentLayout from "../componentLayout";
 const CommunityImpact = () => {
   return (
     <ComponentLayout>
-      <h5 className="mb-7 flex items-center justify-between text-3xl font-semibold text-black dark:text-white">
+      <h5 className="mb-7 flex items-center justify-between text-3xl font-semibold text-black">
         Improve Community Impact
       </h5>
       <p className="mb-4 text-lg text-black lg:text-xl">
