@@ -3,7 +3,7 @@ import Image from "next/image";
 import Form from "./form";
 
 export const metadata: Metadata = {
-  title: "Sign In | StarFishEnergy",
+  title: "Sign In | Pluto",
   description: "Access your community energy dashboard",
 };
 
