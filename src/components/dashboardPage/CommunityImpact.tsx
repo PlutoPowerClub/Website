@@ -1,9 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import ComponentLayout from "../componentLayout";
 
 const CommunityImpact = () => {
   return (
-    <div className="col-span-12 rounded-sm border border-stroke bg-white bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
+    <ComponentLayout>
       <h5 className="mb-7 flex items-center justify-between text-3xl font-semibold text-black dark:text-white">
         Improve Community Impact
       </h5>
@@ -23,7 +24,7 @@ const CommunityImpact = () => {
           </button>
         </Link>
       </div>
-    </div>
+    </ComponentLayout>
   );
 };
 

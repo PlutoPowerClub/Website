@@ -2,7 +2,7 @@
 import { ApexOptions } from "apexcharts";
 import React from "react";
 import ReactApexChart from "react-apexcharts";
-
+import ComponentLayout from "../componentLayout";
 import householdEnergyValues from "./householdEnergy.json";
 
 const options: ApexOptions = {
@@ -62,7 +62,8 @@ const HouseholdEnergyChart: React.FC = () => {
   ];
 
   return (
-    <div className="border-stroked col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default sm:px-7.5 xl:col-span-5">
+    <ComponentLayout>
+      {" "}
       <div className="mb-4 justify-between gap-4 sm:flex">
         <div>
           <h5 className="flex items-center justify-between text-3xl font-semibold text-black ">
@@ -70,7 +71,6 @@ const HouseholdEnergyChart: React.FC = () => {
           </h5>
         </div>
       </div>
-
       <div className="mb-2">
         <div id="chartThree" className="mx-auto flex justify-center">
           <ReactApexChart options={options} series={series} type="donut" />
@@ -105,7 +105,7 @@ const HouseholdEnergyChart: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </ComponentLayout>
   );
 };
 

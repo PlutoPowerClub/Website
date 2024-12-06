@@ -2,7 +2,7 @@
 
 import { ApexOptions } from "apexcharts";
 import ReactApexChart from "react-apexcharts";
-
+import ComponentLayout from "../componentLayout";
 import communityEnergyValues from "./communityEnergy.json";
 
 const options: ApexOptions = {
@@ -56,7 +56,7 @@ const CommunityEnergyChart = () => {
   let series = [communityGridEnergy, communityCommunityEnergy];
 
   return (
-    <div className="px- col-span-12 rounded-sm border border-stroke bg-white pb-2 pt-7.5 text-black shadow-default sm:px-7.5 xl:col-span-5">
+    <ComponentLayout>
       <div className="mb-3 justify-between gap-4 sm:flex">
         <div>
           <h5 className="flex items-center justify-between text-3xl font-semibold text-black dark:text-white">
@@ -91,7 +91,7 @@ const CommunityEnergyChart = () => {
           </div>
         </div>
       </div>
-    </div>
+    </ComponentLayout>
   );
 };
 
