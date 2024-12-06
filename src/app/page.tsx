@@ -1,9 +1,13 @@
 import { redirect } from "next/navigation";
 import Dynamic from "next/dynamic";
 import { getServerSession } from "next-auth";
-const MainDashboard = Dynamic(
-  () => import("@/components/dashboardPage/Dashboard"),
-);
+import HouseholdEnergyChart from "../components/householdEnergy/HouseholdEnergy";
+import CommunityEnergyChart from "../components/communityEnergy/CommunityEnergy";
+import WeatherForecast from "../components/dashboardPage/WeatherForecast";
+import CommunityImpact from "../components/dashboardPage/CommunityImpact";
+import Cash from "../components/dashboardPage/Cash";
+import Link from "next/link";
+
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -16,15 +20,32 @@ export default async function Home() {
     redirect("/api/auth/signin");
   }
   return (
-    <>
-      {session?.user?.name ? (
-        <div className="pb-4 text-3xl font-bold text-black">
-          Welcome {session?.user?.name}!
+    <div className="flex items-center justify-center text-neutral-800">
+      <div className="border-stroke w-full rounded-2xl border bg-red-50 p-6 shadow-lg">
+        {session?.user?.name ? (
+          <div className="mb-4 text-2xl font-bold tracking-tight sm:mb-8 sm:text-5xl xl:text-6xl">
+            Welcome {session?.user?.name}!
+          </div>
+        ) : (
+          <></>
+        )}
+        <div className="border-stroke grid w-full grid-cols-10 gap-5 rounded-xl">
+          <WeatherForecast />
+          <CommunityImpact />
+          <HouseholdEnergyChart />
+          <CommunityEnergyChart />
+          <Cash />
         </div>
-      ) : (
-        <div></div>
-      )}
-      <MainDashboard />
-    </>
+
+        <div className="mt-4 flex flex-row justify-start space-x-10 py-5 text-lg">
+          <Link href="/privacy-policy" className="hover:text-neutral-600">
+            Privacy Policy
+          </Link>
+          <Link href="/stats" className="hover:text-neutral-600">
+            Stats for Nerds
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }
