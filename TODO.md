@@ -5,7 +5,6 @@
 ### Improve Design
 
 - make mobile friendly, start with iphone se and work up.
-- improve design
 - make full size on desktop
 - Better image on left of sign in page
 - animations - framer loading animations like on vital signs
