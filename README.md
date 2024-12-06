@@ -37,5 +37,5 @@ npm run dev
 
 4. Open your browser and visit: localhost:3000
 
-### License
+### License
 This project is licensed under the MIT License - see the LICENSE file for details.
