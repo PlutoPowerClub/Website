@@ -7,7 +7,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  plugins: [addDynamicIconSelectors()],
+  plugins: [addDynamicIconSelectors(), require("@tailwindcss/forms")],
   theme: {
     extend: {
       keyframes: {
