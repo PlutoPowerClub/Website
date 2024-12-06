@@ -2,8 +2,8 @@ import React from "react";
 import ComponentLayout from "../componentLayout";
 const Cash = () => {
   return (
-    <ComponentLayout>
-      <div>
+    <ComponentLayout className="col-span-2">
+      <div className="col-span-12">
         <h5 className="mb-4 text-3xl font-bold text-black ">
           Community Cashback
         </h5>
