@@ -42,7 +42,7 @@ export default async function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="bg-indigo-100">
-        <div className="relative min-h-screen px-5 py-5 sm:px-10">
+        <div className="relative min-h-screen p-5 sm:px-10">
           <SessionProvider session={session}>
             <main>
               <NavMenu />
