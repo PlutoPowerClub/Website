@@ -13,7 +13,7 @@ const SignIn: React.FC = () => {
       <div className="xl:bg border-stroke w-full rounded-2xl border bg-red-50 shadow-lg">
         <div className="flex items-center justify-center sm:py-5 xl:justify-start xl:px-5">
           <div className="w-full p-6 py-5 md:max-w-xl xl:p-8">
-            <p className="mb-5 text-2xl font-medium sm:mb-12 sm:text-5xl">
+            <p className="py-5 text-2xl font-bold sm:mb-12 sm:text-5xl">
               Sign in to visit Pluto.
             </p>
             <Form />
