@@ -1,4 +1,4 @@
-# StarFishEnergy
+# Pluto
 
 Open source community energy dashboard that helps visualise and manage energy consumption data for a community.
 
