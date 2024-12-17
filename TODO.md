@@ -7,11 +7,13 @@
 
 - Keep improving main dashboard page (done sign in page) and other pages.
   - Make mobile friendly, start with iphone se and work up.
-- Defaults (search and replace)
+- Once improved, ask for feedback from someone in Octopus (through Phil).
+
+- NB. Defaults
   - text-neutral-800 instead of black
   - indigo -100 bg, or red-50 or red-100
   - neutral-50 instead of white
-- Once improved, ask for feedback from someone in Octopus (through Phil).
+
 
 ## Backend
 
