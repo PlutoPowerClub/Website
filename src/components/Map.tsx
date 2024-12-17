@@ -103,8 +103,8 @@ const Map: React.FC = () => {
   return (
     <ComponentLayout className="w-full p-0">
       {calculatingSolar && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white/80 backdrop-blur-sm">
-          <div className="mx-4 max-w-sm rounded-2xl bg-white p-6 text-center shadow-lg">
+        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
+          <div className="border-mx-4 border-stroke max-w-sm rounded-2xl border bg-neutral-50 p-6 text-center shadow-xl">
             <svg
               className="mx-auto h-12 w-12 animate-spin text-green-600"
               xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +134,7 @@ const Map: React.FC = () => {
 
       <div
         id="map"
-        className="h-[calc(100vh-12rem)] w-full overflow-hidden rounded-xl shadow-lg sm:h-full"
+        className="h-[calc(100vh-12rem)] w-full overflow-hidden rounded-xl sm:h-full"
         style={{
           touchAction: "pan-x pan-y",
         }}
