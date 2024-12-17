@@ -29,7 +29,7 @@ export default async function Home() {
         ) : (
           <></>
         )}
-        <div className="border-stroke grid w-full grid-cols-2 gap-5 rounded-xl">
+        <div className="border-stroke sm:grid sm:w-full sm:grid-cols-2 sm:gap-5 rounded-xl space-y-5">
           <WeatherForecast />
           <CommunityImpact />
           <HouseholdEnergyChart />
