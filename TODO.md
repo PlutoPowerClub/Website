@@ -7,9 +7,10 @@
 - Keep improving components and pages.
   - Make mobile friendly, start with iphone se and work up.
   - Make tips page look good on mobile
-  - Improve share component
+  - Improve share component on map.
   - Maybe change colour of energy components with the charts.. search and replace that green # and red #.
   - Maybe: Skip sign in button, incl. get rid of protected routes for now just so people can see the app.
+  - Make it so calculating solar potential actually changes the community energy again.
 - Once improved, ask for feedback from someone in Octopus (through Phil).
 
 - NB. Defaults
