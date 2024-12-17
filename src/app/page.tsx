@@ -28,7 +28,7 @@ export default async function Home() {
       ) : (
         <></>
       )}
-      <div className=" space-y-5 rounded-xl sm:grid sm:w-full sm:grid-cols-2 sm:gap-5">
+      <div className="space-y-5 rounded-xl sm:grid sm:w-full sm:grid-cols-2 sm:gap-5 sm:space-y-0">
         <WeatherForecast />
         <CommunityImpact />
         <HouseholdEnergyChart />
