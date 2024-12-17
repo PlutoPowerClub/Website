@@ -7,6 +7,8 @@
 - Keep improving main dashboard page (done sign in page) and other pages.
   - Make mobile friendly, start with iphone se and work up.
   - Make tips page look good on mobile
+  - Improve share component
+  - Maybe change colour of energy components with the charts.. search and replace that green # and red .
 - Once improved, ask for feedback from someone in Octopus (through Phil).
 
 - NB. Defaults
