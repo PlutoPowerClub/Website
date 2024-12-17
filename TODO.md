@@ -4,8 +4,9 @@
 
 ### Improve Design
 
-- Make mobile friendly, start with iphone se and work up.
+
 - Keep improving main dashboard page (done sign in page) and other pages.
+  - Make mobile friendly, start with iphone se and work up.
 - Defaults (search and replace)
   - text-neutral-800 instead of black
   - indigo -100 bg, or red-50 or red-100
