@@ -23,7 +23,7 @@ export default async function Home() {
     <div className="flex items-center justify-center text-neutral-800">
       <div className="border-stroke w-full rounded-2xl border bg-red-50 p-6 shadow-lg">
         {session?.user?.name ? (
-          <div className="mb-4 text-2xl font-bold tracking-tight sm:mb-8 sm:text-5xl xl:text-6xl">
+          <div className="mb-5 text-3xl font-bold tracking-tight sm:mb-8 sm:text-5xl xl:text-6xl">
             Welcome {session?.user?.name}!
           </div>
         ) : (
