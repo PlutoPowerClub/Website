@@ -46,7 +46,9 @@ export default async function RootLayout({
           <SessionProvider session={session}>
             <main>
               <NavMenu />
-              {children}
+              <div className="border-stroke w-full rounded-2xl border bg-red-50 p-6 text-neutral-800 shadow-xl">
+                {children}
+              </div>
             </main>
           </SessionProvider>
         </div>
