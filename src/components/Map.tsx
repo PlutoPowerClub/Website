@@ -89,9 +89,9 @@ const Map: React.FC = () => {
       {calculatingSolar && (
         <div className="popup absolute left-0 z-40 flex h-[100%] w-[100%] justify-center bg-neutral-50 p-10">
           <div className="text-center">
-            <p className="py-10 text-4xl font-bold text-black">
+            <p className="py-10 text-4xl font-bold text-neutral-800">
               <svg
-                className="mx-auto mb-5 h-10 w-10 animate-spin text-black"
+                className="mx-auto mb-5 h-10 w-10 animate-spin text-neutral-800"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"

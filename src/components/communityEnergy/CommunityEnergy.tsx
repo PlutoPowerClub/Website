@@ -59,7 +59,7 @@ const CommunityEnergyChart = () => {
     <ComponentLayout>
       <div className="mb-3 justify-between gap-4 sm:flex">
         <div>
-          <h5 className="flex items-center justify-between text-3xl font-semibold text-black">
+          <h5 className="flex items-center justify-between text-3xl font-semibold text-neutral-800">
             Your Community's Energy
           </h5>
         </div>
@@ -75,7 +75,7 @@ const CommunityEnergyChart = () => {
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#bc4039]"></span>
-            <p className="flex w-full justify-between text-sm font-medium text-black ">
+            <p className="flex w-full justify-between text-sm font-medium text-neutral-800 ">
               <span> Grid </span>
               <span> {communityGridEnergy}%</span>
             </p>
@@ -84,7 +84,7 @@ const CommunityEnergyChart = () => {
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#63c64f]"></span>
-            <p className="flex w-full justify-between text-sm font-medium text-black ">
+            <p className="flex w-full justify-between text-sm font-medium text-neutral-800 ">
               <span> Community </span>
               <span> {communityCommunityEnergy}%</span>
             </p>
