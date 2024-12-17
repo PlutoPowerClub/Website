@@ -4,7 +4,7 @@
 
 ### Improve Design
 
-- Keep improving main dashboard page (done sign in page) and other pages.
+- Keep improving components and pages.
   - Make mobile friendly, start with iphone se and work up.
   - Make tips page look good on mobile
   - Improve share component
