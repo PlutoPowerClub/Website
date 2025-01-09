@@ -2,6 +2,7 @@ import "@/css/style.css";
 import { getServerSession } from "next-auth";
 import SessionProvider from "../providers/SessionProvider";
 import NavMenu from "../components/NavMenu";
+import Footer from "../components/Footer";
 
 export default async function RootLayout({
   children,
@@ -49,6 +50,7 @@ export default async function RootLayout({
               <div className="border-stroke w-full rounded-2xl border bg-red-50 p-6 text-neutral-800 shadow-xl">
                 {children}
               </div>
+              <Footer />
             </main>
           </SessionProvider>
         </div>
