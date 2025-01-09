@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="mt-5 w-full rounded-xl bg-neutral-50 p-6 shadow-lg">
-      <div className="mx-auto max-w-6xl">
+    <footer className="mt-5 flex w-full rounded-xl bg-neutral-50 p-6 shadow-lg">
+      <div className="max-w-6xl">
         <h3 className="text-xl font-semibold text-neutral-800">Quick Links</h3>
         <ul className="mt-2 space-y-2">
           <li>
