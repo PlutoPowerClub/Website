@@ -12,14 +12,14 @@ const CommunityImpact = () => {
         Improve your community's energy impact by adding solar neighbours or
         using less energy.
       </p>
-      <div className="flex flex-col justify-start sm:flex-row sm:space-x-10">
+      <div className="mt-4 flex flex-col justify-start gap-4 sm:flex-row sm:gap-10">
         <Link href="/invites">
-          <button className="rounded-lg bg-neutral-800 px-5 py-2 text-xl text-neutral-50 hover:bg-neutral-700">
+          <button className="rounded-lg bg-neutral-800 px-5 py-2 text-lg text-neutral-50 hover:bg-neutral-700 sm:text-xl">
             Add Solar Neighbours
           </button>
         </Link>
         <Link href="/tips">
-          <button className="rounded-lg bg-neutral-800 px-5 py-2 text-xl text-neutral-50 hover:bg-neutral-700">
+          <button className="rounded-lg bg-neutral-800 px-5 py-2 text-lg text-neutral-50 hover:bg-neutral-700 sm:text-xl">
             Energy Saving Tips
           </button>
         </Link>
