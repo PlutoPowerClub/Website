@@ -1,5 +1,4 @@
 import { redirect } from "next/navigation";
-import Dynamic from "next/dynamic";
 import { getServerSession } from "next-auth";
 import HouseholdEnergyChart from "../components/householdEnergy/HouseholdEnergy";
 import CommunityEnergyChart from "../components/communityEnergy/CommunityEnergy";
