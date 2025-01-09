@@ -6,6 +6,7 @@ import WeatherForecast from "../components/dashboardPage/WeatherForecast";
 import CommunityImpact from "../components/dashboardPage/CommunityImpact";
 import Cash from "../components/dashboardPage/Cash";
 import Link from "next/link";
+import ComponentLayout from "../components/componentLayout";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
@@ -19,10 +20,14 @@ export default async function Home() {
     redirect("/api/auth/signin");
   }
   return (
-    <div className="">
+    <>
       {session?.user?.name ? (
-        <div className="mb-5 text-3xl font-bold tracking-tight sm:mb-8 sm:text-5xl xl:text-6xl">
-          Welcome {session?.user?.name}!
+        <div className="mb-5 space-y-5 rounded-xl sm:w-full sm:grid-cols-2 sm:gap-5 sm:space-y-0">
+          <ComponentLayout>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-5xl xl:text-6xl">
+              Welcome {session?.user?.name}!
+            </h2>
+          </ComponentLayout>
         </div>
       ) : (
         <></>
@@ -34,14 +39,6 @@ export default async function Home() {
         <CommunityEnergyChart />
         <Cash />
       </div>
-      <div className="mt-4 flex flex-row justify-start space-x-10 py-5 text-lg">
-        <Link href="/privacy-policy" className="hover:text-neutral-600">
-          Privacy Policy
-        </Link>
-        <Link href="/stats" className="hover:text-neutral-600">
-          Stats for Nerds
-        </Link>
-      </div>
-    </div>
+    </>
   );
 }
