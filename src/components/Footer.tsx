@@ -22,14 +22,6 @@ export default function Footer() {
               Invite Neighbours
             </Link>
           </li>
-          <li>
-            <Link
-              href="/privacy-policy"
-              className="text-md text-neutral-800 hover:text-indigo-600"
-            >
-              Privacy Policy
-            </Link>
-          </li>
         </ul>
       </div>
     </footer>

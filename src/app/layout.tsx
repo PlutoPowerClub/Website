@@ -50,7 +50,6 @@ export default async function RootLayout({
               <div className="border-stroke w-full rounded-2xl border bg-red-50 p-6 text-neutral-800 shadow-xl">
                 {children}
               </div>
-              <Footer />
             </main>
           </SessionProvider>
         </div>
