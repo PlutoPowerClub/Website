@@ -10,7 +10,7 @@ const options: ApexOptions = {
     fontFamily: "Barlow, sans-serif",
     type: "donut",
   },
-  colors: ["#63c64f", "#bc4039"],
+  colors: ["#16a34a", "#b91c1c"],
   labels: ["Community", "Grid"],
   legend: {
     show: false,
@@ -74,7 +74,7 @@ const CommunityEnergyChart = () => {
       <div className="-mx-8 flex flex-wrap items-center justify-center gap-y-3">
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
-            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#bc4039]"></span>
+            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#4d991b]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-neutral-800 ">
               <span> Grid </span>
               <span> {communityGridEnergy}%</span>
@@ -83,7 +83,7 @@ const CommunityEnergyChart = () => {
         </div>
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
-            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#63c64f]"></span>
+            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#16a34a]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-neutral-800 ">
               <span> Community </span>
               <span> {communityCommunityEnergy}%</span>

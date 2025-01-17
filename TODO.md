@@ -6,12 +6,14 @@
 
 - Keep improving components and pages.
 
-  - Improve share component on map.
-  - Maybe change colour of energy components with the charts.. search and replace that green # and red #.
+  - Improve share component on map - hovers
   - Maybe: Skip sign in button, incl. get rid of protected routes for now just so people can see the app.
   - Make it so calculating solar potential actually changes the community energy again.
 
 - NB. Defaults
+  - #b91c1c red
+  - #16a34a green
+  - #d97706 yellow
   - text-neutral-800 instead of black
   - indigo -100 bg, or red-50 or red-100
   - neutral-50 instead of white

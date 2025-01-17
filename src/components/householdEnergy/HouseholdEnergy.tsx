@@ -10,7 +10,7 @@ const options: ApexOptions = {
     fontFamily: "Barlow, sans-serif",
     type: "donut",
   },
-  colors: ["#7dc35f", "#ae493f", "#dfb641"],
+  colors: ["#7dc35f", "#b91c1c", "#dfb641"],
   labels: ["Community", "Grid", "Individual"],
   legend: {
     show: false,
@@ -79,7 +79,7 @@ const HouseholdEnergyChart: React.FC = () => {
       <div className="-mx-8 flex flex-wrap items-center justify-center gap-y-3">
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
-            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#63c64f]"></span>
+            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#16a34a]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-neutral-800 ">
               <span> Community </span>
               <span> {householdCommunityEnergy}% </span>
@@ -88,7 +88,7 @@ const HouseholdEnergyChart: React.FC = () => {
         </div>
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
-            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#ae493f] "></span>
+            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#b91c1c] "></span>
             <p className="flex w-full justify-between text-sm font-medium text-neutral-800 ">
               <span> Grid </span>
               <span> {householdGridEnergy}% </span>
@@ -97,7 +97,7 @@ const HouseholdEnergyChart: React.FC = () => {
         </div>
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
-            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#d7a21c]"></span>
+            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#d97706]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-neutral-800 ">
               <span> Individual </span>
               <span> {householdIndividualEnergy}% </span>
