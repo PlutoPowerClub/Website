@@ -7,7 +7,9 @@ export default function ComponentLayout({
 }>) {
   return (
     <div
-      className={`border-stroke sm:px-7.5 rounded-xl border bg-neutral-50 p-5 shadow-sm sm:space-y-5 ${className || ""}`}
+      className={`border-stroke sm:px-7.5 rounded-xl border p-5 shadow-sm sm:space-y-5 ${
+        className?.includes("bg-") ? "" : "bg-neutral-50"
+      } ${className || ""}`}
     >
       {children}
     </div>
