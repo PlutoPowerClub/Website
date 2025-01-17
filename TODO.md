@@ -6,7 +6,6 @@
 
 - Keep improving components and pages.
 
-  - Make tips page look good on mobile
   - Improve share component on map.
   - Maybe change colour of energy components with the charts.. search and replace that green # and red #.
   - Maybe: Skip sign in button, incl. get rid of protected routes for now just so people can see the app.
