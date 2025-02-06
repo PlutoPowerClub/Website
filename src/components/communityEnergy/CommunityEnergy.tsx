@@ -3,7 +3,8 @@
 import { ApexOptions } from "apexcharts";
 import ReactApexChart from "react-apexcharts";
 import ComponentLayout from "../componentLayout";
-import communityEnergyValues from "./communityEnergy.json";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
 
 const options: ApexOptions = {
   chart: {
@@ -49,11 +50,11 @@ const options: ApexOptions = {
 };
 
 const CommunityEnergyChart = () => {
-  let communityGridEnergy: number =
-    communityEnergyValues.communityGridEnergy.initialValue;
-  let communityCommunityEnergy: number =
-    communityEnergyValues.communityCommunityEnergy.initialValue;
-  let series = [communityGridEnergy, communityCommunityEnergy];
+  const { communityGridEnergy, communityCommunityEnergy } = useSelector(
+    (state: RootState) => state.energy,
+  );
+
+  const series = [communityCommunityEnergy, communityGridEnergy];
 
   return (
     <ComponentLayout>
@@ -74,7 +75,7 @@ const CommunityEnergyChart = () => {
       <div className="-mx-8 flex flex-wrap items-center justify-center gap-y-3">
         <div className="w-full px-8 sm:w-1/2">
           <div className="flex w-full items-center">
-            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#4d991b]"></span>
+            <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#b91c1c]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-neutral-800 ">
               <span> Grid </span>
               <span> {communityGridEnergy}%</span>

@@ -3,15 +3,16 @@ import React, { useEffect, useState } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import ComponentLayout from "./componentLayout";
-interface SolarApiResponse {
-  yearlyEnergyDcKwh: number;
+import { useDispatch } from "react-redux";
+import { updateCommunityEnergy } from "@/store/features/energySlice";
+interface SolarPotential {
+  value: number;
 }
 
 const Map: React.FC = () => {
+  const dispatch = useDispatch();
   const [selectedBuildings, setSelectedBuildings] = useState<string[]>([]);
   const [calculatingSolar, setCalculatingSolar] = useState(false);
-  const [currentValue, setCurrentValue] = useState<number>(30);
-  const [solarData, setSolarData] = useState<SolarApiResponse | null>(null);
 
   useEffect(() => {
     const map = new maplibregl.Map({
@@ -74,9 +75,18 @@ const Map: React.FC = () => {
             }
 
             setCalculatingSolar(true);
-            const solarData = 10;
-            const newValue = currentValue + solarData;
-            setCurrentValue(newValue);
+
+            const SolarPotential = 1; // This would come from API
+
+            const newGridEnergy = 100 - SolarPotential;
+            const newCommunityEnergy = Math.min(100, 100 - newGridEnergy);
+
+            dispatch(
+              updateCommunityEnergy({
+                communityGridEnergy: -SolarPotential,
+                communityCommunityEnergy: +SolarPotential,
+              }),
+            );
 
             setTimeout(() => {
               setCalculatingSolar(false);
@@ -98,7 +108,7 @@ const Map: React.FC = () => {
     });
 
     return () => map.remove();
-  }, [selectedBuildings, currentValue]);
+  }, [selectedBuildings]);
 
   return (
     <ComponentLayout className="w-full p-0">

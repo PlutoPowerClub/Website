@@ -2,7 +2,7 @@ import "@/css/style.css";
 import { getServerSession } from "next-auth";
 import SessionProvider from "../providers/SessionProvider";
 import NavMenu from "../components/NavMenu";
-import Footer from "../components/Footer";
+import { Providers } from "@/store/provider";
 
 export default async function RootLayout({
   children,
@@ -44,14 +44,16 @@ export default async function RootLayout({
       </head>
       <body className="bg-neutral-900">
         <div className="relative min-h-screen animate-[fadeIn_0.4s_ease-in] p-5 sm:px-10">
-          <SessionProvider session={session}>
-            <main>
-              <NavMenu />
-              <div className="border-stroke w-full rounded-2xl border bg-red-50 p-6 text-neutral-800 shadow-xl">
-                {children}
-              </div>
-            </main>
-          </SessionProvider>
+          <Providers>
+            <SessionProvider session={session}>
+              <main>
+                <NavMenu />
+                <div className="border-stroke w-full rounded-2xl border bg-red-50 p-6 text-neutral-800 shadow-xl">
+                  {children}
+                </div>
+              </main>
+            </SessionProvider>
+          </Providers>
         </div>
       </body>
     </html>
