@@ -5,7 +5,6 @@ import CommunityEnergyChart from "../components/communityEnergy/CommunityEnergy"
 import WeatherForecast from "../components/dashboardPage/WeatherForecast";
 import CommunityImpact from "../components/dashboardPage/CommunityImpact";
 import Cash from "../components/dashboardPage/Cash";
-import Link from "next/link";
 import ComponentLayout from "../components/componentLayout";
 
 import { Metadata } from "next";
