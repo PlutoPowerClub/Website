@@ -22,7 +22,7 @@ interface ForecastData {
 const dummyForecastData: ForecastData = {
   current: {
     time: "2024-07-01T12:00:00Z",
-    temperature_2m: 17,
+    temperature_2m: 10,
     cloud_cover: 20,
     weather_description: "Partly Cloudy",
   },
@@ -44,7 +44,6 @@ const WeatherForecast: React.FC = () => {
   const [forecastData, setForecastData] = useState<ForecastData | null>(null);
 
   useEffect(() => {
-    // Simulate fetching data by setting dummy data
     setForecastData(dummyForecastData);
   }, []);
 
