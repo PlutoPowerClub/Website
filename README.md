@@ -4,9 +4,10 @@ Open source community energy dashboard that helps visualise and manage energy co
 
 ## Features
 
-- Interactive dashboards and Apex Charts
-- Authentication with Next Auth and AWS Cognito
+- Interactive dashboards and Apex Charts.
+- Authentication with Next Auth and AWS Cognito.
 - Open source map of a community built with MapLibre and GeoJSON.
+- React Redux for global state management.
 
 ## Getting Started
 
@@ -38,4 +39,5 @@ npm run dev
 4. Open your browser and visit: localhost:3000
 
 ## License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
