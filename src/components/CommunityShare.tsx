@@ -4,9 +4,10 @@ import ComponentLayout from "@/components/componentLayout";
 const CommunityBuild = () => {
   return (
     <ComponentLayout>
-      <h1 className="mb-4 text-3xl font-semibold text-neutral-800">Share</h1>
+      <h1 className="mb-4 text-3xl font-semibold text-neutral-800">
+        Share your results
+      </h1>
       <div className="flex flex-row justify-normal gap-10">
-        <p className="text-xl text-neutral-800">Share these results:</p>
         <div className="flex flex-row justify-between space-x-5 text-2xl">
           <Link
             href={`https://twitter.com/intent/tweet?text=&url=https://plutowebsite.vercel.app/`}

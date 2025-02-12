@@ -14,9 +14,10 @@ export default function Home() {
         <h1 className="text-2xl font-bold text-neutral-800 sm:text-3xl">
           Energy Saving Guide
         </h1>
-        <p className="max-w-xl text-lg text-neutral-800 sm:text-xl">
+        <p className=" text-lg text-neutral-800 sm:text-xl">
           Discover smart ways to reduce your energy consumption and make a
-          positive impact on the environment while benefitting your community.
+          positive impact on the environment. The less energy you use, the more
+          money you have for your community!
         </p>
       </ComponentLayout>
 
