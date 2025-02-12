@@ -24,7 +24,7 @@ export default async function Home() {
         <div className="mb-5 space-y-5 rounded-xl sm:w-full sm:grid-cols-2 sm:gap-5 sm:space-y-0">
           <ComponentLayout>
             <h2 className="text-3xl font-bold tracking-tight sm:text-5xl xl:text-6xl">
-              Welcome {session?.user?.name}!
+              Welcome, {session?.user?.name}!
             </h2>
           </ComponentLayout>
         </div>
