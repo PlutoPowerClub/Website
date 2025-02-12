@@ -19,18 +19,11 @@ const projects = [
     image: "/images/projects/garden.jpg",
   },
   {
-    title: "Kids' Football Team",
-    description: "Fund equipment and training facilities...",
-    estimatedCost: "£3,000",
-    link: "https://www.londonyouthgames.org",
-    image: "/images/projects/football.jpg",
-  },
-  {
     title: "Solar Panels for Local School",
     description: "Install solar panels on the local school roof...",
     estimatedCost: "£15,000",
     link: "https://www.solarschools.org.uk",
-    image: "/images/projects/solar-school.jpg",
+    image: "/images/projects/school.jpg",
   },
   {
     title: "Insulation for Low-income Households",
@@ -64,7 +57,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <ComponentLayout key={index}>
             <div className="grid gap-6 sm:grid-cols-[2fr,3fr]">
-              <div className="relative h-48 w-full overflow-hidden rounded-lg sm:h-full">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
                 <Image
                   src={project.image}
                   alt={project.title}
