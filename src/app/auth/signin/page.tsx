@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Form from "./form";
 
 export const metadata: Metadata = {
@@ -9,26 +10,63 @@ export const metadata: Metadata = {
 
 const SignIn: React.FC = () => {
   return (
-    <div className="flex">
-      <div className="w-full flex-col justify-center lg:w-1/2 lg:justify-between lg:p-2">
-        <div className="w-full p-6 py-5 lg:max-w-xl">
-          <p className="mb-4 text-2xl font-bold tracking-tight sm:mb-8 sm:text-5xl xl:text-6xl">
-            Sign in to visit Pluto.
-          </p>
+    <div className="flex min-h-screen">
+      <div className="w-full flex-col justify-center space-y-6 p-8 lg:w-1/2 lg:justify-between lg:p-12">
+        <div>
+          <h1 className="mb-6 text-3xl font-bold tracking-tight sm:text-5xl xl:text-6xl">
+            Welcome to Pluto.
+          </h1>
+          <div className="space-y-4 text-lg text-neutral-800">
+            <p>
+              Welcome to Pluto, your community solar energy platform. We're
+              building a future where neighbourhoods power themselves through
+              shared solar energy.
+            </p>
+            <p>
+              By joining Pluto, you become part of a network of households,
+              businesses, and community groups working together to:
+            </p>
+            <ul className="ml-6 list-disc space-y-2">
+              <li>Generate and share clean solar energy</li>
+              <li>Reduce energy costs for everyone</li>
+              <li>Fund local community projects</li>
+              <li>Track your community's environmental impact</li>
+            </ul>
+            <p className="mt-6 text-xl font-semibold">
+              Join us in powering a brighter, more sustainable future for your
+              community.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="hidden w-1/2  lg:block">
+        <div className="flex h-full flex-col justify-center p-12">
           <Form />
-          <div className="mt-4 rounded-xl bg-neutral-50 p-4 lg:mt-8">
-            <h2 className="mb-1 text-xl font-semibold text-neutral-800 sm:text-2xl">
-              No credentials? Use the demo account:
-            </h2>
-            <div className="space-y-2 lg:space-y-3">
-              <p className="text-body sm:text-xl xl:text-2xl">
+          <h2 className="my-4 text-xl font-semibold text-neutral-800">
+            Don't have an account?
+          </h2>
+          <Link href="/auth/signup">
+            <button
+              type="submit"
+              className="w-20 rounded-lg bg-neutral-800 px-5 py-2 text-xl text-neutral-50 hover:bg-neutral-700 sm:text-2xl"
+            >
+              Join
+            </button>
+          </Link>
+          <div className="mt-8 rounded-xl bg-neutral-50 p-6 shadow-sm">
+            <div className="space-y-3">
+              <h2 className="mb-4 text-xl font-semibold text-neutral-800">
+                Demo Account
+              </h2>
+              <p className="text-lg">
                 Email:
                 <br />
                 <span className="font-medium text-neutral-800">
                   jackkershaw@protonmail.com
                 </span>
               </p>
-              <p className="text-body sm:text-xl xl:text-2xl">
+              <p className="text-lg">
                 Password:
                 <br />
                 <span className="font-medium text-neutral-800">
@@ -37,17 +75,6 @@ const SignIn: React.FC = () => {
               </p>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="hidden lg:block lg:w-1/2">
-        <div className="relative h-full w-full">
-          <Image
-            src="/images/surface.png"
-            alt="Surface of Pluto."
-            fill
-            className="rounded-xl rounded-l-none object-cover"
-            priority
-          />
         </div>
       </div>
     </div>
