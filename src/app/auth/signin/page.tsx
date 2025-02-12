@@ -18,7 +18,7 @@ const SignIn: React.FC = () => {
           <Form />
           <div className="mt-4 rounded-xl bg-neutral-50 p-4 lg:mt-8">
             <h2 className="mb-1 text-xl font-semibold text-neutral-800 sm:text-2xl">
-              Demo Account
+              No credentials? Use the demo account:
             </h2>
             <div className="space-y-2 lg:space-y-3">
               <p className="text-body sm:text-xl xl:text-2xl">
