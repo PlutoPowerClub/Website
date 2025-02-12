@@ -12,7 +12,7 @@ const options: ApexOptions = {
     type: "donut",
   },
   colors: ["#16a34a", "#b91c1c"],
-  labels: ["Community", "Grid"],
+  labels: ["Community Solar", "Grid Energy"],
   legend: {
     show: false,
     position: "bottom",
@@ -77,7 +77,7 @@ const CommunityEnergyChart = () => {
           <div className="flex w-full items-center">
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#b91c1c]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-neutral-800 ">
-              <span> Grid </span>
+              <span> Grid Energy</span>
               <span> {communityGridEnergy}%</span>
             </p>
           </div>
@@ -86,7 +86,7 @@ const CommunityEnergyChart = () => {
           <div className="flex w-full items-center">
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#16a34a]"></span>
             <p className="flex w-full justify-between text-sm font-medium text-neutral-800 ">
-              <span> Community </span>
+              <span> Community Solar </span>
               <span> {communityCommunityEnergy}%</span>
             </p>
           </div>
