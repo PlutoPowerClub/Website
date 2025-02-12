@@ -99,7 +99,7 @@ const Cash = () => {
           </form>
         </div>
       </div>
-      <p className="mb-6 text-lg text-neutral-800 lg:text-xl">
+      <p className="my-10 text-lg text-neutral-800 lg:text-xl">
         Want more ideas for community projects?
         <Link href="/projects">
           <button className="mx-5 rounded-lg bg-neutral-800 px-5 py-2 text-lg text-neutral-50 hover:bg-neutral-700 sm:text-xl">
