@@ -6,28 +6,32 @@ import Image from "next/image";
 const projects = [
   {
     title: "Bike Bus",
-    description: "A supervised group cycle to local schools...",
+    description:
+      "A supervised group cycle to local schools, making the school run safer and more environmentally friendly. Get your children energised and ready to learn!",
     estimatedCost: "£2,000",
     link: "https://www.bikebus.org",
     image: "/images/projects/bike-bus.jpg",
   },
   {
     title: "Community Garden",
-    description: "Transform unused space into a thriving community garden...",
+    description:
+      "Transform unused space into a thriving community garden, providing organically produced food and a space for community gatherings.",
     estimatedCost: "£5,000",
     link: "https://www.capitalgrowth.org",
     image: "/images/projects/garden.jpg",
   },
   {
     title: "Solar Panels for Local School",
-    description: "Install solar panels on the local school roof...",
+    description:
+      "Install solar panels on the local school roof, reducing their energy costs and adding them to your solar community.",
     estimatedCost: "£15,000",
     link: "https://www.solarschools.org.uk",
     image: "/images/projects/school.jpg",
   },
   {
     title: "Insulation for Low-income Households",
-    description: "Provide insulation improvements for households...",
+    description:
+      "Provide insulation improvements for households in need, reducing energy bills and saving money for more community projects.",
     estimatedCost: "£10,000",
     link: "https://www.energysavingtrust.org.uk",
     image: "/images/projects/insulation.jpg",
@@ -71,7 +75,7 @@ export default function Projects() {
                   <h2 className="text-2xl font-semibold text-neutral-800">
                     {project.title}
                   </h2>
-                  <p className="text-lg text-neutral-800">
+                  <p className="max-w-lg pt-5 text-lg text-neutral-800">
                     {project.description}
                   </p>
                 </div>
