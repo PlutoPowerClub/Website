@@ -22,7 +22,7 @@ interface ForecastData {
 const dummyForecastData: ForecastData = {
   current: {
     time: "2024-07-01T12:00:00Z",
-    temperature_2m: 10,
+    temperature_2m: 5,
     cloud_cover: 20,
     weather_description: "Partly Cloudy",
   },
