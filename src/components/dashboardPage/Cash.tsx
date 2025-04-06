@@ -29,7 +29,7 @@ const Cash = () => {
   };
 
   return (
-    <ComponentLayout className="col-span-2">
+    <ComponentLayout className="col-span-1">
       <div className="col-span-12">
         <h5 className="mb-2 text-2xl font-bold text-neutral-800">
           Community Cashback
@@ -81,7 +81,7 @@ const Cash = () => {
           ))}
           {/* Add Project Form */}
           <form onSubmit={handleAddProject} className="mt-6">
-            <div className="flex gap-2">
+            <div className="flex flex-col gap-2 sm:flex-row">
               <input
                 type="text"
                 value={newProject}
@@ -99,14 +99,16 @@ const Cash = () => {
           </form>
         </div>
       </div>
-      <p className="my-10 text-lg text-neutral-800 lg:text-xl">
-        Want more ideas for community projects?
+      <div className="my-8 flex flex-col gap-4 sm:flex-row sm:gap-8">
+        <p className="text-lg text-neutral-800 lg:text-xl">
+          Want more ideas for community projects?
+        </p>
         <Link href="/projects">
-          <button className="mx-5 rounded-lg bg-neutral-800 px-5 py-2 text-lg text-neutral-50 hover:bg-neutral-700 sm:text-xl">
-            More ideas
+          <button className="rounded-lg bg-neutral-800 px-6 py-2 text-lg text-neutral-50 hover:bg-neutral-700">
+            More Ideas
           </button>
         </Link>
-      </p>
+      </div>
     </ComponentLayout>
   );
 };
