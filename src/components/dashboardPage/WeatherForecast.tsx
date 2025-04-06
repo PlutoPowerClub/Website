@@ -66,12 +66,12 @@ const WeatherForecast: React.FC = () => {
   return (
     <ComponentLayout>
       <div>
-        <div className="mb-4">
-          <h6 className="mb-2 text-3xl font-bold text-neutral-800">
+        <div className="mb-2">
+          <h6 className="mb-1 text-2xl font-bold text-neutral-800">
             Current Weather
           </h6>
 
-          <div className="flex gap-10">
+          <div className="flex gap-6">
             <div className="flex-col">
               <p className="text-4xl font-medium text-neutral-800">
                 {Math.round(weatherData.current.temperature_2m)}°C

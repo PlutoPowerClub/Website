@@ -31,10 +31,10 @@ const Cash = () => {
   return (
     <ComponentLayout className="col-span-2">
       <div className="col-span-12">
-        <h5 className="mb-4 text-3xl font-bold text-neutral-800">
+        <h5 className="mb-2 text-2xl font-bold text-neutral-800">
           Community Cashback
         </h5>
-        <p className="mb-6 text-lg text-neutral-800 lg:text-xl">
+        <p className="mb-3 text-base text-neutral-800 lg:text-lg">
           The more energy your community makes, the more cash you get for
           community projects! As an Octopus Energy customer, your solar energy
           gets sold back to the grid, making you and your community money.

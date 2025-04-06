@@ -9,6 +9,7 @@ const options: ApexOptions = {
   chart: {
     fontFamily: "Barlow, sans-serif",
     type: "donut",
+    height: 280, // Reduce from default height
   },
   colors: ["#7dc35f", "#b91c1c", "#dfb641"],
   labels: ["Community Solar", "Grid Energy", "My Solar"],
