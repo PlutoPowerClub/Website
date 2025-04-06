@@ -14,6 +14,14 @@ interface WeatherData {
     time: string[];
     temperature_2m: number[];
     cloud_cover: number[];
+    solar_radiation: number[];
+  };
+  daily: {
+    time: string[];
+    temperature_2m_max: number[];
+    temperature_2m_min: number[];
+    sunrise: string[];
+    sunset: string[];
   };
 }
 
@@ -27,17 +35,17 @@ const WeatherForecast: React.FC = () => {
         const lat = 51.5157368;
         const lon = -0.1414441;
         const response = await fetch(
-          `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,cloud_cover,is_day&hourly=temperature_2m,cloud_cover&timezone=auto`,
+          `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,cloud_cover,is_day&hourly=temperature_2m,cloud_cover&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=auto&forecast_days=3`,
         );
 
         if (!response.ok) {
-          throw new Error("Weather data fetch failed");
+          throw new Error(`Weather data fetch failed: ${response.status}`);
         }
         const data = await response.json();
         setWeatherData(data);
       } catch (err) {
-        setError("Failed to load weather data");
-        console.error(err);
+        console.error("Weather API error:", err);
+        setError("Failed to load weather data. Please try again later.");
       }
     };
     fetchWeather();
@@ -48,6 +56,29 @@ const WeatherForecast: React.FC = () => {
     if (cloudCover < 50) return "Partly Cloudy";
     if (cloudCover < 80) return "Mostly Cloudy";
     return "Cloudy";
+  };
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-GB", {
+      weekday: "short",
+      day: "numeric",
+    });
+  };
+
+  const formatTime = (timeString: string) => {
+    const date = new Date(timeString);
+    return date.toLocaleTimeString("en-GB", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  };
+
+  const getSolarPotential = (cloudCover: number) => {
+    if (cloudCover < 20) return "Excellent";
+    if (cloudCover < 50) return "Good";
+    if (cloudCover < 80) return "Fair";
+    return "Poor";
   };
 
   if (error)
@@ -65,16 +96,17 @@ const WeatherForecast: React.FC = () => {
 
   return (
     <ComponentLayout>
-      <div className="mb-2 flex flex-col gap-5">
-        <h6 className="mb-1 text-2xl font-bold text-neutral-800">
-          Current Weather
-        </h6>
-        <div className="flex gap-6">
+      <div className="flex flex-col gap-3">
+        <h5 className="text-2xl font-semibold text-neutral-800">
+          Your Energy Schedule
+        </h5>
+        <h6 className="text-xl font-bold text-neutral-800">Current Weather</h6>
+        <div className="flex gap-4">
           <div className="flex-col">
-            <p className="text-4xl font-medium text-neutral-800">
+            <p className="text-3xl font-medium text-neutral-800">
               {Math.round(weatherData.current.temperature_2m)}°C
             </p>
-            <p className="text-2xl text-gray-600">
+            <p className="text-xl text-gray-600">
               {getWeatherDescription(weatherData.current.cloud_cover)}
             </p>
           </div>
@@ -82,8 +114,8 @@ const WeatherForecast: React.FC = () => {
             {weatherData.current.cloud_cover < 20 ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="96"
-                height="96"
+                width="64"
+                height="64"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -94,8 +126,8 @@ const WeatherForecast: React.FC = () => {
             ) : weatherData.current.cloud_cover < 50 ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="96"
-                height="96"
+                width="64"
+                height="64"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -106,8 +138,8 @@ const WeatherForecast: React.FC = () => {
             ) : weatherData.current.cloud_cover < 80 ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="96"
-                height="96"
+                width="64"
+                height="64"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -118,8 +150,8 @@ const WeatherForecast: React.FC = () => {
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="96"
-                height="96"
+                width="64"
+                height="64"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -130,11 +162,64 @@ const WeatherForecast: React.FC = () => {
             )}
           </div>
         </div>
-        <p className="text-xl text-neutral-800">
-          {weatherData.current.cloud_cover > 50
-            ? "Consider waiting for weather to improve before using energy."
-            : "Great weather for solar energy, use it to power your home."}
-        </p>
+
+        <div className="mt-1">
+          <p className="text-lg text-neutral-800">
+            {weatherData.current.cloud_cover > 50
+              ? "Consider waiting for weather to improve before using energy. Check below to plan your energy use over the next three days. "
+              : "Great weather for solar energy, use it to power your home. Check below to plan your energy use over the next three days."}
+          </p>
+        </div>
+
+        <div className="mt-2">
+          <h6 className="text-xl font-bold text-neutral-800">
+            Three Day Forecast
+          </h6>
+          <div className="mt-2 grid grid-cols-3 gap-2">
+            {weatherData.daily.time.slice(0, 3).map((day, index) => (
+              <div
+                key={day}
+                className="rounded-lg bg-neutral-100 p-2 text-center"
+              >
+                <p className="font-medium">{formatDate(day)}</p>
+                <div className="flex justify-center">
+                  {Math.round(weatherData.daily.temperature_2m_max[index])}°/
+                  {Math.round(weatherData.daily.temperature_2m_min[index])}°
+                </div>
+                <div className="mt-1 text-xs">
+                  <div className="flex items-center justify-center gap-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="#d97706"
+                        d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5s5-2.24 5-5s-2.24-5-5-5M2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1m18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1M11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1m0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1M5.99 4.58a.996.996 0 0 0-1.41 0a.996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58m12.37 12.37a.996.996 0 0 0-1.41 0a.996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06m1.06-10.96a.996.996 0 0 0 0-1.41a.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06M7.05 18.36a.996.996 0 0 0 0-1.41a.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"
+                      />
+                    </svg>
+                    {formatTime(weatherData.daily.sunrise[index])}
+                  </div>
+                  <div className="flex items-center justify-center gap-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="#b91c1c"
+                        d="M12 9c1.65 0 3 1.35 3 3s-1.35 3-3 3s-3-1.35-3-3s1.35-3 3-3m0-2c-2.76 0-5 2.24-5 5s2.24 5 5 5s5-2.24 5-5s-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0a.996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0a.996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41a.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41a.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"
+                      />
+                    </svg>
+                    {formatTime(weatherData.daily.sunset[index])}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </ComponentLayout>
   );
