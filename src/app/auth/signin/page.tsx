@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const SignIn: React.FC = () => {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen flex-col lg:flex-row">
       <div className="w-full flex-col justify-center space-y-6 p-8 lg:w-1/2 lg:justify-between lg:p-12">
         <div>
           <h1 className="mb-6 text-3xl font-bold tracking-tight sm:text-5xl xl:text-6xl">
@@ -40,8 +40,8 @@ const SignIn: React.FC = () => {
         </div>
       </div>
 
-      <div className="hidden w-1/2  lg:block">
-        <div className="flex h-full flex-col justify-center p-12">
+      <div className="w-full lg:w-1/2">
+        <div className="flex h-full flex-col justify-center p-8 lg:p-12">
           <Form />
           <h2 className="my-4 text-xl font-semibold text-neutral-800">
             Don't have an account?
