@@ -1,10 +1,5 @@
-import HouseholdEnergyChart from "../components/householdEnergy/HouseholdEnergy";
-import CommunityEnergyChart from "../components/communityEnergy/CommunityEnergy";
-import WeatherForecast from "../components/dashboardPage/WeatherForecast";
-import CommunityImpact from "../components/dashboardPage/CommunityImpact";
-import Cash from "../components/dashboardPage/Cash";
-import EnergyTips from "../components/dashboardPage/EnergyTips";
 import ComponentLayout from "../components/componentLayout";
+import ClientApp from "@/components/ClientApp";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
@@ -29,14 +24,9 @@ export default async function Home() {
       ) : (
         <></>
       )}
-      <div className="space-y-5 rounded-xl sm:grid sm:w-full sm:grid-cols-2 sm:gap-5 sm:space-y-0">
-        <EnergyTips />
-        <CommunityImpact />
-        <HouseholdEnergyChart />
-        <CommunityEnergyChart />
-        <WeatherForecast />
-        <Cash />
-      </div>
+
+      {/* Client-only UI: moved to a client component to avoid server-side window access */}
+      <ClientApp />
     </>
   );
 }
