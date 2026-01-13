@@ -7,19 +7,22 @@ const EnergyTips = dynamic(() => import("./dashboardPage/EnergyTips"), {
 });
 const CommunityImpact = dynamic(
   () => import("./dashboardPage/CommunityImpact"),
-  { ssr: false }
+  { ssr: false },
 );
 const HouseholdEnergyChart = dynamic(
   () => import("./householdEnergy/HouseholdEnergy"),
-  { ssr: false }
+  { ssr: false },
 );
 const CommunityEnergyChart = dynamic(
   () => import("./communityEnergy/CommunityEnergy"),
-  { ssr: false }
+  { ssr: false },
 );
-const WeatherForecast = dynamic(() => import("./dashboardPage/WeatherForecast"), {
-  ssr: false,
-});
+const WeatherForecast = dynamic(
+  () => import("./dashboardPage/WeatherForecast"),
+  {
+    ssr: false,
+  },
+);
 const Cash = dynamic(() => import("./dashboardPage/Cash"), { ssr: false });
 
 export default function ClientApp() {

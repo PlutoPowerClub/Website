@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 
 const CommunityEnergyChart = dynamic(
   () => import("@/components/communityEnergy/CommunityEnergy"),
-  { ssr: false }
+  { ssr: false },
 );
 
 export default function InvitesClient() {
