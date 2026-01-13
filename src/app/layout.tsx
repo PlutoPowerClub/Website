@@ -1,5 +1,4 @@
 import "@/css/style.css";
-import { getServerSession } from "next-auth";
 import SessionProvider from "../providers/SessionProvider";
 import NavMenu from "../components/NavMenu";
 import { Providers } from "@/store/provider";
@@ -9,7 +8,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = await getServerSession();
   return (
     <html lang="en">
       <head>
@@ -45,7 +43,7 @@ export default async function RootLayout({
       <body className="bg-neutral-900">
         <div className="relative min-h-screen animate-[fadeIn_0.4s_ease-in] p-5 sm:px-10">
           <Providers>
-            <SessionProvider session={session}>
+            <SessionProvider>
               <main>
                 <NavMenu />
                 <div className="border-stroke w-full rounded-2xl border bg-red-50 p-6 text-neutral-800 shadow-xl">

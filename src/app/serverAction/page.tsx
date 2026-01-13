@@ -1,5 +1,3 @@
-import { getServerSession } from "next-auth";
-
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Server",
@@ -9,7 +7,7 @@ export const metadata: Metadata = {
 export default async function ServerActionPage() {
   const whoAmI = async () => {
     "use server";
-    const session = await getServerSession();
-    return session?.user?.name || "Not Logged In";
+    // Auth disabled — return demo identity
+    return "Demo User";
   };
 }

@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Form from "./form";
 
 export const metadata: Metadata = {
   title: "Sign In | Pluto",
@@ -42,7 +41,26 @@ const SignIn: React.FC = () => {
 
       <div className="w-full lg:w-1/2">
         <div className="flex h-full flex-col justify-center p-8 lg:p-12">
-          <Form />
+          {/* Authentication disabled: bypass sign-in */}
+          <div className="mb-6 rounded-lg bg-yellow-50 p-6">
+            <h3 className="mb-2 text-lg font-semibold text-neutral-800">
+              Authentication disabled
+            </h3>
+            <p className="text-neutral-700">
+              The application is running without authentication. Click "Continue
+              to App" to proceed as a demo user.
+            </p>
+          </div>
+
+          <Link href="/">
+            <button
+              type="button"
+              className="mb-6 w-full rounded-lg bg-neutral-800 px-5 py-3 text-xl text-neutral-50 hover:bg-neutral-700 sm:text-2xl"
+            >
+              Continue to App
+            </button>
+          </Link>
+
           <h2 className="my-4 text-xl font-semibold text-neutral-800">
             Don't have an account?
           </h2>
@@ -54,27 +72,6 @@ const SignIn: React.FC = () => {
               Join
             </button>
           </Link>
-          <div className="mt-8 rounded-xl bg-neutral-50 p-6 shadow-sm">
-            <div className="space-y-3">
-              <h2 className="mb-4 text-xl font-semibold text-neutral-800">
-                Demo Account
-              </h2>
-              <p className="text-lg">
-                Email:
-                <br />
-                <span className="font-medium text-neutral-800">
-                  jackkershaw@protonmail.com
-                </span>
-              </p>
-              <p className="text-lg">
-                Password:
-                <br />
-                <span className="font-medium text-neutral-800">
-                  Test1!Test1!
-                </span>
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>

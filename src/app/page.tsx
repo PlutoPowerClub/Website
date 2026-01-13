@@ -1,5 +1,3 @@
-import { redirect } from "next/navigation";
-import { getServerSession } from "next-auth";
 import HouseholdEnergyChart from "../components/householdEnergy/HouseholdEnergy";
 import CommunityEnergyChart from "../components/communityEnergy/CommunityEnergy";
 import WeatherForecast from "../components/dashboardPage/WeatherForecast";
@@ -15,10 +13,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-  const session = await getServerSession();
-  if (!session || !session.user) {
-    redirect("/api/auth/signin");
-  }
+  // Provide a demo session when auth is disabled
+  const session = { user: { name: "Demo User" } };
+
   return (
     <>
       {session?.user?.name ? (

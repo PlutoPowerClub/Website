@@ -1,16 +1,11 @@
 "use client";
 import { FormEvent } from "react";
-import { signIn } from "next-auth/react";
 
 export default function Form(): JSX.Element {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    await signIn("cognito", {
-      email: formData.get("email"),
-      password: formData.get("password"),
-      callbackUrl: "/",
-    });
+    // Auth disabled — proceed to app
+    window.location.href = "/";
   };
   return (
     <form onSubmit={handleSubmit} className="space-y-4 text-neutral-800">
